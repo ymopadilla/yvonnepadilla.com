@@ -350,9 +350,62 @@
     @media (prefers-reduced-motion: reduce) {
       .card { transition: none; }
     }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      width: 40px; height: 40px;
+      object-fit: contain;
+      display: block;
+      transition: opacity 0.2s;
+    }
+    .nav-logo:hover { opacity: 0.7; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--violet); }
+    @media (max-width: 480px) {
+      .nav-links { gap: 1.25rem; }
+      .nav-links a { font-size: 0.75rem; }
+    }
   </style>
 </head>
-<body>
+<body id="top">
+
+  <!-- ── NAV ── -->
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#top">
+      <img src="images/yp-mark.png" alt="Yvonne Padilla home" class="nav-logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#businesses">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- ── HERO ── -->
   <header>
@@ -365,10 +418,10 @@
         </p>
         <div class="hero-pills">
           <a class="pill pill-coral" href="#card-dns">Web &amp; AI</a>
-          <a class="pill pill-gold" href="#card-br">Life Coaching</a>
-          <a class="pill pill-violet" href="#card-yp">Leadership &amp; Consulting</a>
           <a class="pill pill-green" href="#card-hv">Family Legacy</a>
+          <a class="pill pill-violet" href="#card-yp">Leadership &amp; Consulting</a>
           <a class="pill pill-teal" href="#card-nh">Nerd Culture</a>
+          <a class="pill pill-gold" href="#card-br">Life Coaching</a>
           <a class="pill pill-blue" href="#card-coh">Homeschooling</a>
         </div>
         <p class="hero-location">Colorado Springs &amp; Beyond</p>
