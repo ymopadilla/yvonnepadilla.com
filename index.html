@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO: Core ── -->
+  <title>Yvonne Padilla | Web Design &amp; AI Consulting for Small Businesses</title>
+  <meta name="description" content="Web designer, AI consultant, and catalyst for small business growth. Custom websites with no monthly fees plus one-on-one AI coaching. Affordable, personal, and AI-forward — serving clients nationally." />
+  <meta name="keywords" content="web design for small businesses, AI consulting for small business, custom website no monthly fees, AI coaching, small business web designer, affordable web design, leadership consulting, life coaching, Colorado Springs" />
+  <meta name="author" content="Yvonne Padilla" />
+  <link rel="canonical" href="https://yvonnepadilla.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ── SEO: Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yvonnepadilla.com/" />
+  <meta property="og:title" content="Yvonne Padilla | Web Design &amp; AI Consulting for Small Businesses" />
+  <meta property="og:description" content="Web designer, AI consultant, and catalyst for small business growth. Custom websites with no monthly fees plus one-on-one AI coaching. Serving clients nationally." />
+  <meta property="og:image" content="https://yvonnepadilla.com/og-image.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Yvonne Padilla" />
+
+  <!-- ── SEO: Twitter/X Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yvonne Padilla | Web Design &amp; AI Consulting for Small Businesses" />
+  <meta name="twitter:description" content="Web designer, AI consultant, and catalyst for small business growth. Custom websites with no monthly fees plus one-on-one AI coaching." />
+  <meta name="twitter:image" content="https://yvonnepadilla.com/og-image.png" />
+
+  <!-- ── SEO: Schema.org ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yvonne Padilla",
+    "url": "https://yvonnepadilla.com",
+    "image": "https://yvonnepadilla.com/og-image.png",
+    "description": "Entrepreneur, web designer, AI consultant, leadership consultant, life coach, and homeschool evaluator based in Colorado Springs.",
+    "jobTitle": "Entrepreneur & Web Design / AI Consultant",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Colorado Springs",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    },
+    "telephone": "+17193188200",
+    "email": "hello@yvonnepadilla.com"
+  }
+  </script>
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" type="image/png" href="images/yp-mark.png" />
+  <link rel="apple-touch-icon" href="images/yp-mark.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #ffffff;
+      --off-white: #F8F7FC;
+      --coral: #F05A3A;
+      --teal: #2ABFBF;
+      --violet: #7C3AED;
+      --violet-pale: #EDE9FE;
+      --gold: #F59E0B;
+      --green: #10B981;
+      --text: #1F2937;
+      --muted: #6B7280;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--text); font-family: 'Inter', sans-serif; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,0.10) 0%, transparent 70%);
+      top: -100px; left: -100px; pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,0.07) 0%, transparent 70%);
+      bottom: -80px; right: -80px; pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+    .hero-logo { width: 100px; height: 100px; object-fit: contain; margin: 0 auto 1rem; display: block; }
+    .hero-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 700; line-height: 1.05; color: var(--text); margin-bottom: 1.25rem;
+    }
+    .hero-name .accent { color: var(--violet); }
+    .hero-tagline {
+      font-size: clamp(1rem, 2vw, 1.1rem); font-weight: 300;
+      color: var(--muted); line-height: 1.8; margin-bottom: 2rem;
+      max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .hero-pills {
+      display: grid;
+      grid-template-columns: repeat(3, 220px);
+      gap: 0.6rem;
+      justify-content: center;
+      justify-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      padding: 0.4rem 1rem; border-radius: 999px;
+      font-size: 0.78rem; font-weight: 500; border: 1.5px solid currentColor;
+      width: 100%; text-align: center;
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s;
+      display: block;
+    }
+    .pill:hover { opacity: 0.75; }
+    .pill-violet { color: var(--violet); }
+    .pill-coral  { color: var(--coral); }
+    .pill-teal   { color: var(--teal); }
+    .pill-gold   { color: #D97706; }
+    .pill-green  { color: var(--green); }
+    .pill-blue   { color: #3B82F6; }
+    .hero-location {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0;
+    }
+
+    /* ── COLOR BAR ── */
+    .color-bar {
+      height: 5px;
+      background: linear-gradient(90deg,
+        var(--violet) 0%, var(--violet) 16.6%,
+        #6B8F71 16.6%, #6B8F71 33.2%,
+        var(--coral) 33.2%, var(--coral) 49.8%,
+        var(--gold) 49.8%, var(--gold) 66.4%,
+        var(--teal) 66.4%, var(--teal) 83%,
+        #3B82F6 83%, #3B82F6 100%
+      );
+    }
+
+    /* ── BUSINESSES ── */
+    .businesses { background: var(--off-white); padding: 5rem 2rem 2.5rem; }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-eyebrow {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--violet); margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700; color: var(--text); line-height: 1.2;
+    }
+
+    .stack {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 14px;
+      border-left: 5px solid var(--accent);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      transition: transform 0.22s, box-shadow 0.22s;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      align-items: center;
+      overflow: hidden;
+    }
+    .card:hover { transform: translateX(4px); box-shadow: 0 6px 28px rgba(0,0,0,0.09); }
+
+    .card-logo-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.75rem 1.25rem;
+      border-right: 1px solid #F3F4F6;
+      min-height: 140px;
+      background: rgba(0,0,0,0.01);
+    }
+    .card-logo {
+      max-height: 90px;
+      max-width: 160px;
+      width: auto;
+      object-fit: contain;
+    }
+    .card-nh .card-logo  { max-height: 50px; }
+    .card-coh .card-logo { max-height: 60px; }
+    .card-yp .card-logo  { max-height: 110px; max-width: 170px; }
+
+    .card-body { padding: 1.5rem 1.75rem; }
+    .card-top {
+      display: flex; align-items: baseline;
+      gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;
+    }
+    .card-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem; font-weight: 700; color: var(--text);
+    }
+    .card-url {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+      color: var(--accent); text-decoration: none;
+    }
+    .card-url:hover { text-decoration: underline; }
+    .card-desc { font-size: 0.88rem; line-height: 1.7; color: #4B5563; margin-bottom: 1rem; }
+    .card-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+    .card-email {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.76rem; font-weight: 500;
+      color: var(--accent); text-decoration: none;
+      padding: 0.35rem 0.85rem;
+      border: 1.5px solid var(--accent);
+      border-radius: 999px;
+      transition: background 0.18s, color 0.18s;
+      white-space: nowrap;
+    }
+    .card-email:hover { background: var(--accent); color: white; }
+    .card-badge {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.28rem 0.7rem; border-radius: 999px;
+      background: rgba(42,191,191,0.12); color: var(--teal);
+      border: 1px solid var(--teal); white-space: nowrap;
+    }
+
+    .card-yp  { --accent: #7C3AED; }
+    .card-hv  { --accent: #6B8F71; }
+    .card-dns { --accent: #E8614A; }
+    .card-nh  { --accent: #6366F1; }
+    .card-br  { --accent: #C9A96E; }
+    .card-coh { --accent: #3B82F6; }
+
+    /* Phone row */
+    .phone-row {
+      text-align: center; padding: 2rem 2rem 4rem;
+      background: var(--off-white);
+    }
+    .phone-row p { font-size: 1rem; color: var(--muted); }
+    .phone-row a {
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--violet); text-decoration: none;
+    }
+    .phone-row a:hover { text-decoration: underline; }
+
+    /* ── ABOUT ── */
+    .about { background: var(--white); padding: 5rem 2rem 5.5rem; }
+    .about-inner {
+      max-width: 820px; margin: 0 auto;
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 4rem; align-items: start;
+    }
+    .about-photo-wrap { position: relative; }
+    .about-photo {
+      width: 100%; border-radius: 16px; object-fit: cover;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.15); display: block;
+    }
+    .about-photo-ring {
+      position: absolute; inset: -7px; border-radius: 20px;
+      border: 3px solid transparent;
+      background: linear-gradient(135deg, var(--violet), var(--teal), var(--coral)) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .about-text .section-eyebrow { margin-bottom: 0.4rem; }
+    .about-text .section-title { margin-bottom: 1.25rem; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+    .about-bio { font-size: 1rem; line-height: 1.85; color: #4B5563; }
+
+    /* ── CONTACT FORM ── */
+    .contact { background: var(--off-white); padding: 5rem 2rem 5.5rem; }
+    .contact-inner { max-width: 620px; margin: 0 auto; text-align: center; }
+    .contact-inner .section-eyebrow { margin-bottom: 0.4rem; }
+    .contact-inner .section-title { margin-bottom: 0.5rem; }
+    .contact-subtitle {
+      font-size: 1rem; color: var(--muted); margin-bottom: 2.5rem; line-height: 1.6;
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; text-align: left; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label {
+      font-size: 0.78rem; font-weight: 600; color: var(--text);
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.75rem 1rem;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--violet); }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-submit {
+      display: inline-block;
+      padding: 0.9rem 2.6rem;
+      background: var(--violet);
+      color: white; border: none; border-radius: 999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.35);
+      align-self: center; margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: #6D28D9; transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--text); padding: 2.5rem 2rem; text-align: center; }
+    .footer-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem; color: white; margin-bottom: 0.4rem;
+    }
+    .footer-sub { font-size: 0.78rem; color: rgba(255,255,255,0.4); letter-spacing: 0.06em; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 650px) {
+      .card { grid-template-columns: 1fr; }
+      .card-logo-col { border-right: none; border-bottom: 1px solid #F3F4F6; min-height: 100px; }
+      .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .about-photo-wrap { max-width: 240px; margin: 0 auto; }
+      .about-text { text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-pills { grid-template-columns: repeat(2, 180px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .card { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <header>
+    <section class="hero">
+      <div class="hero-inner">
+        <img src="images/yp-mark.png" alt="Yvonne Padilla YP logo" class="hero-logo" />
+        <h1 class="hero-name">Yvonne <span class="accent">Padilla</span></h1>
+        <p class="hero-tagline">
+          I build websites, coach leaders, preserve family legacies, and walk alongside people through life's pivotal moments — because at the end of the day, helping people own their story is what drives everything I do.
+        </p>
+        <div class="hero-pills">
+          <a class="pill pill-coral" href="#card-dns">Web &amp; AI</a>
+          <a class="pill pill-gold" href="#card-br">Life Coaching</a>
+          <a class="pill pill-violet" href="#card-yp">Leadership &amp; Consulting</a>
+          <a class="pill pill-green" href="#card-hv">Family Legacy</a>
+          <a class="pill pill-teal" href="#card-nh">Nerd Culture</a>
+          <a class="pill pill-blue" href="#card-coh">Homeschooling</a>
+        </div>
+        <p class="hero-location">Colorado Springs &amp; Beyond</p>
+      </div>
+    </section>
+  </header>
+
+  <div class="color-bar"></div>
+
+  <!-- ── BUSINESSES ── -->
+  <main>
+    <section class="businesses" id="businesses">
+      <div class="section-header">
+        <p class="section-eyebrow">The Portfolio</p>
+        <h2 class="section-title">Six Businesses. One Purpose.</h2>
+      </div>
+
+      <div class="stack">
+
+        <!-- 1: Digital Navigation Solutions -->
+        <article class="card card-dns" id="card-dns">
+          <div class="card-logo-col">
+            <a href="https://digitalnavigationsolutions.com" target="_blank" rel="noopener">
+              <img class="card-logo" src="images/dns-logo.jpg" alt="Digital Navigation Solutions — web design and AI consulting for small businesses" />
+            </a>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">Digital Navigation Solutions</h3>
+              <a class="card-url" href="https://digitalnavigationsolutions.com" target="_blank" rel="noopener">digitalnavigationsolutions.com</a>
+            </div>
+            <p class="card-desc">Web design and AI consulting for small businesses. Custom websites with no monthly platform fees after launch, plus one-on-one AI coaching to help owners put the right tools to work. Plain language, honest pricing, sites clients actually own.</p>
+            <div class="card-footer">
+              <a class="card-email" href="mailto:yvonne@digitalnavigationsolutions.com">✉ yvonne@digitalnavigationsolutions.com</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2: Heartwood Vault -->
+        <article class="card card-hv" id="card-hv">
+          <div class="card-logo-col">
+            <a href="https://heartwoodvault.com" target="_blank" rel="noopener">
+              <img class="card-logo" src="images/heartwood-vault-logo.png" alt="Heartwood Vault — family legacy platform" />
+            </a>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">Heartwood Vault™</h3>
+              <a class="card-url" href="https://heartwoodvault.com" target="_blank" rel="noopener">heartwoodvault.com</a>
+            </div>
+            <p class="card-desc">A family legacy platform preserving and passing down the stories, history, and values that define who we are across generations. Crafted with care for what matters most.</p>
+            <div class="card-footer">
+              <a class="card-email" href="mailto:yvonne@heartwoodvault.com">✉ yvonne@heartwoodvault.com</a>
+              <span class="card-badge">✨ In Beta — All Tiers Free</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3: Yvonne Padilla Consulting -->
+        <article class="card card-yp" id="card-yp">
+          <div class="card-logo-col">
+            <a href="https://yvonnepadilla.com" target="_blank" rel="noopener">
+              <img class="card-logo" src="images/yp-logo.png" alt="Yvonne Padilla Consulting — leadership development and workshops" />
+            </a>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">Yvonne Padilla Consulting</h3>
+              <a class="card-url" href="https://yvonnepadilla.com" target="_blank" rel="noopener">yvonnepadilla.com</a>
+            </div>
+            <p class="card-desc">Former principal and experienced leader helping individuals and organizations build stronger teams, sharper vision, and real results — through customized workshops and one-on-one leadership support.</p>
+            <div class="card-footer">
+              <a class="card-email" href="mailto:hello@yvonnepadilla.com">✉ hello@yvonnepadilla.com</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4: Nerd Hive -->
+        <article class="card card-nh" id="card-nh">
+          <div class="card-logo-col">
+            <a href="https://nerdhiveofficial.com" target="_blank" rel="noopener">
+              <img class="card-logo" src="images/nerdhive-logo.png" alt="Nerd Hive — premium nerd culture apparel" />
+            </a>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">Nerd Hive™</h3>
+              <a class="card-url" href="https://nerdhiveofficial.com" target="_blank" rel="noopener">nerdhiveofficial.com</a>
+            </div>
+            <p class="card-desc">Premium apparel celebrating nerd culture through humor-driven design. Wear your nerd. Own your quirks. No hiding. No apologizing.</p>
+            <div class="card-footer">
+              <a class="card-email" href="mailto:yvonne@nerdhiveofficial.com">✉ yvonne@nerdhiveofficial.com</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5: Bloom Reimagined -->
+        <article class="card card-br" id="card-br">
+          <div class="card-logo-col">
+            <a href="https://bloomreimagined.com" target="_blank" rel="noopener">
+              <img class="card-logo" src="images/bloom-logo.png" alt="Bloom Reimagined — transitional life coaching and personal development" />
+            </a>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">Bloom Reimagined</h3>
+              <a class="card-url" href="https://bloomreimagined.com" target="_blank" rel="noopener">bloomreimagined.com</a>
+            </div>
+            <p class="card-desc">Transitional coaching and personal development for life's pivotal moments. Not a checklist service — a practice of walking alongside people as they find their footing and grow into what's next.</p>
+            <div class="card-footer">
+              <a class="card-email" href="mailto:coach@bloomreimagined.com">✉ coach@bloomreimagined.com</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6: Colorado Homeschooling -->
+        <article class="card card-coh" id="card-coh">
+          <div class="card-logo-col">
+            <a href="https://coloradohomeschooling.com" target="_blank" rel="noopener">
+              <img class="card-logo" src="images/cohomeschool-logo.jpg" alt="Colorado Homeschooling — state evaluation services for homeschool families" />
+            </a>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">Colorado Homeschooling</h3>
+              <a class="card-url" href="https://coloradohomeschooling.com" target="_blank" rel="noopener">coloradohomeschooling.com</a>
+            </div>
+            <p class="card-desc">Partnering with Colorado families to navigate state evaluation requirements — making the process straightforward, affordable, and family-centered. Twenty-five years working alongside the homeschool community.</p>
+            <div class="card-footer">
+              <a class="card-email" href="mailto:yvonne@coloradohomeschooling.com">✉ yvonne@coloradohomeschooling.com</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PHONE ROW -->
+    <div class="phone-row">
+      <p>Have a question? Call or text: <a href="tel:+17193188200">719-318-8200</a></p>
+    </div>
+
+    <div class="color-bar"></div>
+
+    <!-- ── ABOUT ── -->
+    <section class="about" id="about" aria-label="About Yvonne Padilla">
+      <div class="about-inner">
+        <div class="about-photo-wrap">
+          <div class="about-photo-ring"></div>
+          <img class="about-photo" src="images/yvonne-photo.png" alt="Yvonne Padilla — web designer, AI consultant, and entrepreneur based in Colorado Springs" />
+        </div>
+        <div class="about-text">
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-title">Hi, I'm Yvonne</h2>
+          <p class="about-bio">
+            I'm a web designer, AI consultant, former principal, and creative entrepreneur
+            based in Colorado Springs. I help small business owners build custom websites
+            they actually own — no monthly platform fees — plus one-on-one AI coaching
+            that cuts through the noise and puts the right tools in their hands.
+            <br><br>
+            People who've worked with me have one word for what I do: <strong>catalyst</strong>.
+            I show up where things are stuck, ask the right questions, and help people and
+            organizations move — toward stronger teams, clearer vision, and real results.
+            <br><br>
+            Across six ventures, one thread runs through everything: honest support,
+            practical tools, and the belief that you deserve to build something that lasts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT FORM ── -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="contact-subtitle">
+          Whether you need a website, AI coaching, a leadership workshop, or just
+          want to explore what's possible — I'd love to hear from you.
+        </p>
+        <form class="contact-form" action="https://formspree.io/f/mykqerno" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">What are you interested in?</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service...</option>
+              <option value="Web Design & AI Consulting">Web Design &amp; AI Consulting</option>
+              <option value="Leadership Consulting & Workshops">Leadership Consulting &amp; Workshops</option>
+              <option value="Heartwood Vault">Heartwood Vault</option>
+              <option value="Life Coaching (Bloom Reimagined)">Life Coaching (Bloom Reimagined)</option>
+              <option value="Colorado Homeschooling Evaluations">Colorado Homeschooling Evaluations</option>
+              <option value="Nerd Hive Apparel">Nerd Hive Apparel</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me a little about what you're looking for..." required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New inquiry from yvonnepadilla.com" />
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p class="footer-name">Yvonne Padilla</p>
+    <p class="footer-sub">yvonnepadilla.com &nbsp;·&nbsp; Colorado Springs, CO &nbsp;·&nbsp; Serving clients nationally</p>
+  </footer>
+
+</body>
+</html>
