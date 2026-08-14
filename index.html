@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ── SEO: Core ── -->
-  <title>Yvonne Padilla | Entrepreneur · Creative · Catalyst</title>
-  <meta name="description" content="Web designer, AI consultant, and catalyst for small business growth. Custom websites with no monthly fees plus one-on-one AI coaching. Affordable, personal, and AI-forward — serving clients nationally." />
-  <meta name="keywords" content="web design for small businesses, AI consulting for small business, custom website no monthly fees, AI coaching, small business web designer, affordable web design, leadership consulting, life coaching, Colorado Springs" />
+  <title>Yvonne Padilla | Fractional Consultant for Education Organizations</title>
+  <meta name="description" content="Fractional consultant helping education and homeschool organizations optimize operations, develop leaders, and scale enrollment. 26 years in education, serving Colorado Springs." />
+  <meta name="keywords" content="fractional consultant education, homeschool programs, educational leadership consulting, Colorado Springs, operations consultant, leadership development education" />
   <meta name="author" content="Yvonne Padilla" />
   <link rel="canonical" href="https://yvonnepadilla.com/" />
   <meta name="robots" content="index, follow" />
@@ -15,16 +15,16 @@
   <!-- ── SEO: Open Graph ── -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yvonnepadilla.com/" />
-  <meta property="og:title" content="Yvonne Padilla | Entrepreneur · Creative · Catalyst" />
-  <meta property="og:description" content="Web designer, AI consultant, and catalyst for small business growth. Custom websites with no monthly fees plus one-on-one AI coaching. Serving clients nationally." />
+  <meta property="og:title" content="Yvonne Padilla | Fractional Consultant for Education Organizations" />
+  <meta property="og:description" content="Fractional consultant helping education and homeschool organizations optimize operations, develop leaders, and scale enrollment. 26 years in education, serving Colorado Springs." />
   <meta property="og:image" content="https://yvonnepadilla.com/og-image.png" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Yvonne Padilla" />
 
   <!-- ── SEO: Twitter/X Card ── -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Yvonne Padilla | Entrepreneur · Creative · Catalyst" />
-  <meta name="twitter:description" content="Web designer, AI consultant, and catalyst for small business growth. Custom websites with no monthly fees plus one-on-one AI coaching." />
+  <meta name="twitter:title" content="Yvonne Padilla | Fractional Consultant for Education Organizations" />
+  <meta name="twitter:description" content="Fractional consultant helping education and homeschool organizations optimize operations, develop leaders, and scale enrollment. 26 years in education." />
   <meta name="twitter:image" content="https://yvonnepadilla.com/og-image.png" />
 
   <!-- ── SEO: Schema.org ── -->
@@ -35,8 +35,8 @@
     "name": "Yvonne Padilla",
     "url": "https://yvonnepadilla.com",
     "image": "https://yvonnepadilla.com/og-image.png",
-    "description": "Entrepreneur, web designer, AI consultant, leadership consultant, life coach, and homeschool evaluator based in Colorado Springs.",
-    "jobTitle": "Entrepreneur & Web Design / AI Consultant",
+    "description": "Fractional consultant helping education and homeschool organizations optimize operations, develop leaders, and scale enrollment. Based in Colorado Springs.",
+    "jobTitle": "Fractional Consultant for Education Organizations",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Colorado Springs",
@@ -111,28 +111,35 @@
       max-width: 600px; margin-left: auto; margin-right: auto;
     }
     .hero-pills {
-      display: grid;
-      grid-template-columns: repeat(3, 220px);
+      display: flex;
+      flex-wrap: wrap;
       gap: 0.6rem;
       justify-content: center;
-      justify-items: center;
+      align-items: center;
       margin-bottom: 1.25rem;
     }
     .pill {
       padding: 0.4rem 1rem; border-radius: 999px;
       font-size: 0.78rem; font-weight: 500; border: 1.5px solid currentColor;
-      width: 100%; text-align: center;
+      width: 220px; text-align: center;
       text-decoration: none;
       transition: background 0.18s, color 0.18s;
       display: block;
     }
     .pill:hover { opacity: 0.75; }
+    .pill-sm {
+      width: 150px;
+      font-size: 0.7rem;
+      padding: 0.32rem 0.85rem;
+      opacity: 0.85;
+      flex-basis: 100%;
+      max-width: 150px;
+      margin: 0 auto;
+    }
     .pill-violet { color: var(--violet); }
     .pill-coral  { color: var(--coral); }
     .pill-teal   { color: var(--teal); }
-    .pill-gold   { color: #D97706; }
     .pill-green  { color: var(--green); }
-    .pill-blue   { color: #3B82F6; }
     .hero-location {
       font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em;
       text-transform: uppercase; color: var(--muted); margin-bottom: 0;
@@ -200,8 +207,6 @@
       width: auto;
       object-fit: contain;
     }
-    .card-nh .card-logo  { max-height: 50px; }
-    .card-coh .card-logo { max-height: 60px; }
     .card-yp .card-logo  { max-height: 110px; max-width: 170px; }
 
     .card-body { padding: 1.5rem 1.75rem; }
@@ -241,9 +246,12 @@
     .card-yp  { --accent: #7C3AED; }
     .card-hv  { --accent: #6B8F71; }
     .card-dns { --accent: #E8614A; }
-    .card-nh  { --accent: #6366F1; }
-    .card-br  { --accent: #C9A96E; }
-    .card-coh { --accent: #3B82F6; }
+    .card-yp .card-badge {
+      background: rgba(124,58,237,0.10);
+      color: var(--violet);
+      border-color: var(--violet);
+      white-space: normal;
+    }
 
     /* Phone row */
     .phone-row {
@@ -345,7 +353,7 @@
       .about-photo-wrap { max-width: 240px; margin: 0 auto; }
       .about-text { text-align: center; }
       .form-row { grid-template-columns: 1fr; }
-      .hero-pills { grid-template-columns: repeat(2, 180px); }
+      .pill { width: 180px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .card { transition: none; }
@@ -401,7 +409,7 @@
       <img src="images/yp-mark.png" alt="Yvonne Padilla home" class="nav-logo" />
     </a>
     <ul class="nav-links">
-      <li><a href="#businesses">Portfolio</a></li>
+      <li><a href="#businesses">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -414,15 +422,13 @@
         <img src="images/yp-mark.png" alt="Yvonne Padilla YP logo" class="hero-logo" />
         <h1 class="hero-name">Yvonne <span class="accent">Padilla</span></h1>
         <p class="hero-tagline">
-          I build websites, coach leaders, preserve family legacies, and walk alongside people through life's pivotal moments — because at the end of the day, helping people own their story is what drives everything I do.
+          I help education organizations optimize operations, develop leaders, and scale enrollment — with 26 years of expertise in education and deep knowledge of the homeschooling community.
         </p>
         <div class="hero-pills">
-          <a class="pill pill-coral" href="#card-dns">Web &amp; AI</a>
-          <a class="pill pill-green" href="#card-hv">Family Legacy</a>
-          <a class="pill pill-violet" href="#card-yp">Leadership &amp; Consulting</a>
-          <a class="pill pill-teal" href="#card-nh">Nerd Culture</a>
-          <a class="pill pill-gold" href="#card-br">Life Coaching</a>
-          <a class="pill pill-blue" href="#card-coh">Homeschooling</a>
+          <a class="pill pill-violet" href="#card-yp">Fractional Consulting</a>
+          <a class="pill pill-green" href="#card-yp">Education Leadership</a>
+          <a class="pill pill-coral" href="#card-yp">Systems Optimization</a>
+          <a class="pill pill-teal pill-sm" href="#card-dns">Web &amp; AI</a>
         </div>
         <p class="hero-location">Colorado Springs &amp; Beyond</p>
       </div>
@@ -435,13 +441,33 @@
   <main>
     <section class="businesses" id="businesses">
       <div class="section-header">
-        <p class="section-eyebrow">The Portfolio</p>
-        <h2 class="section-title">Six Businesses. One Purpose.</h2>
+        <p class="section-eyebrow">What I Do</p>
+        <h2 class="section-title">My Services</h2>
       </div>
 
       <div class="stack">
 
-        <!-- 1: Digital Navigation Solutions -->
+        <!-- 1: Yvonne Padilla Consulting -->
+        <article class="card card-yp" id="card-yp">
+          <div class="card-logo-col">
+            <a href="https://yvonnepadilla.com" target="_blank" rel="noopener">
+              <img class="card-logo" src="images/yp-logo.png" alt="Yvonne Padilla Consulting — fractional consulting for education organizations" />
+            </a>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">Yvonne Padilla Consulting</h3>
+              <a class="card-url" href="https://yvonnepadilla.com" target="_blank" rel="noopener">yvonnepadilla.com</a>
+            </div>
+            <p class="card-desc">Fractional consultant helping education organizations and homeschool programs optimize operations, develop strong leaders, and scale enrollment. I work on monthly retainers, providing strategic thinking and problem-solving for culture, systems, and leadership challenges. 26 years in education, 17 as a founding principal. If things feel stuck or you're concerned about losing your culture as you grow, let's talk.</p>
+            <div class="card-footer">
+              <a class="card-email" href="mailto:hello@yvonnepadilla.com">✉ hello@yvonnepadilla.com</a>
+              <span class="card-badge">Focus: Education &amp; Homeschool Organizations</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2: Digital Navigation Solutions -->
         <article class="card card-dns" id="card-dns">
           <div class="card-logo-col">
             <a href="https://digitalnavigationsolutions.com" target="_blank" rel="noopener">
@@ -453,14 +479,14 @@
               <h3 class="card-name">Digital Navigation Solutions</h3>
               <a class="card-url" href="https://digitalnavigationsolutions.com" target="_blank" rel="noopener">digitalnavigationsolutions.com</a>
             </div>
-            <p class="card-desc">Web design and AI consulting for small businesses. Custom websites with no monthly platform fees after launch, plus one-on-one AI coaching to help owners put the right tools to work. Plain language, honest pricing, sites clients actually own.</p>
+            <p class="card-desc">Web design and AI consulting for small businesses. Custom websites with no monthly platform fees plus one-on-one AI coaching.</p>
             <div class="card-footer">
               <a class="card-email" href="mailto:yvonne@digitalnavigationsolutions.com">✉ yvonne@digitalnavigationsolutions.com</a>
             </div>
           </div>
         </article>
 
-        <!-- 2: Heartwood Vault -->
+        <!-- 3: Heartwood Vault -->
         <article class="card card-hv" id="card-hv">
           <div class="card-logo-col">
             <a href="https://heartwoodvault.com" target="_blank" rel="noopener">
@@ -472,86 +498,10 @@
               <h3 class="card-name">Heartwood Vault™</h3>
               <a class="card-url" href="https://heartwoodvault.com" target="_blank" rel="noopener">heartwoodvault.com</a>
             </div>
-            <p class="card-desc">A family legacy platform preserving and passing down the stories, history, and values that define who we are across generations. Crafted with care for what matters most.</p>
+            <p class="card-desc">A family legacy platform preserving and passing down stories, history, and values across generations.</p>
             <div class="card-footer">
               <a class="card-email" href="mailto:yvonne@heartwoodvault.com">✉ yvonne@heartwoodvault.com</a>
               <span class="card-badge">✨ In Beta — All Tiers Free</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 3: Yvonne Padilla Consulting -->
-        <article class="card card-yp" id="card-yp">
-          <div class="card-logo-col">
-            <a href="https://yvonnepadilla.com" target="_blank" rel="noopener">
-              <img class="card-logo" src="images/yp-logo.png" alt="Yvonne Padilla Consulting — leadership development and workshops" />
-            </a>
-          </div>
-          <div class="card-body">
-            <div class="card-top">
-              <h3 class="card-name">Yvonne Padilla Consulting</h3>
-              <a class="card-url" href="https://yvonnepadilla.com" target="_blank" rel="noopener">yvonnepadilla.com</a>
-            </div>
-            <p class="card-desc">Former principal and experienced leader helping individuals and organizations build stronger teams, sharper vision, and real results — through customized workshops and one-on-one leadership support.</p>
-            <div class="card-footer">
-              <a class="card-email" href="mailto:hello@yvonnepadilla.com">✉ hello@yvonnepadilla.com</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4: Nerd Hive -->
-        <article class="card card-nh" id="card-nh">
-          <div class="card-logo-col">
-            <a href="https://nerdhiveofficial.com" target="_blank" rel="noopener">
-              <img class="card-logo" src="images/nerdhive-logo.png" alt="Nerd Hive — premium nerd culture apparel" />
-            </a>
-          </div>
-          <div class="card-body">
-            <div class="card-top">
-              <h3 class="card-name">Nerd Hive™</h3>
-              <a class="card-url" href="https://nerdhiveofficial.com" target="_blank" rel="noopener">nerdhiveofficial.com</a>
-            </div>
-            <p class="card-desc">Premium apparel celebrating nerd culture through humor-driven design. Wear your nerd. Own your quirks. No hiding. No apologizing.</p>
-            <div class="card-footer">
-              <a class="card-email" href="mailto:yvonne@nerdhiveofficial.com">✉ yvonne@nerdhiveofficial.com</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 5: Bloom Reimagined -->
-        <article class="card card-br" id="card-br">
-          <div class="card-logo-col">
-            <a href="https://bloomreimagined.com" target="_blank" rel="noopener">
-              <img class="card-logo" src="images/bloom-logo.png" alt="Bloom Reimagined — transitional life coaching and personal development" />
-            </a>
-          </div>
-          <div class="card-body">
-            <div class="card-top">
-              <h3 class="card-name">Bloom Reimagined</h3>
-              <a class="card-url" href="https://bloomreimagined.com" target="_blank" rel="noopener">bloomreimagined.com</a>
-            </div>
-            <p class="card-desc">Transitional coaching and personal development for life's pivotal moments. Not a checklist service — a practice of walking alongside people as they find their footing and grow into what's next.</p>
-            <div class="card-footer">
-              <a class="card-email" href="mailto:coach@bloomreimagined.com">✉ coach@bloomreimagined.com</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 6: Colorado Homeschooling -->
-        <article class="card card-coh" id="card-coh">
-          <div class="card-logo-col">
-            <a href="https://coloradohomeschooling.com" target="_blank" rel="noopener">
-              <img class="card-logo" src="images/cohomeschool-logo.jpg" alt="Colorado Homeschooling — state evaluation services for homeschool families" />
-            </a>
-          </div>
-          <div class="card-body">
-            <div class="card-top">
-              <h3 class="card-name">Colorado Homeschooling</h3>
-              <a class="card-url" href="https://coloradohomeschooling.com" target="_blank" rel="noopener">coloradohomeschooling.com</a>
-            </div>
-            <p class="card-desc">Partnering with Colorado families to navigate state evaluation requirements — making the process straightforward, affordable, and family-centered. Twenty-five years working alongside the homeschool community.</p>
-            <div class="card-footer">
-              <a class="card-email" href="mailto:yvonne@coloradohomeschooling.com">✉ yvonne@coloradohomeschooling.com</a>
             </div>
           </div>
         </article>
@@ -571,23 +521,34 @@
       <div class="about-inner">
         <div class="about-photo-wrap">
           <div class="about-photo-ring"></div>
-          <img class="about-photo" src="images/yvonne-photo.png" alt="Yvonne Padilla — web designer, AI consultant, and entrepreneur based in Colorado Springs" />
+          <img class="about-photo" src="images/yvonne-photo.png" alt="Yvonne Padilla — fractional consultant for education organizations, based in Colorado Springs" />
         </div>
         <div class="about-text">
           <p class="section-eyebrow">About</p>
           <h2 class="section-title">Hi, I'm Yvonne</h2>
           <p class="about-bio">
-            I'm a web designer, AI consultant, former principal, and creative entrepreneur
-            based in Colorado Springs. I help small business owners build custom websites
-            they actually own — no monthly platform fees — plus one-on-one AI coaching
-            that cuts through the noise and puts the right tools in their hands.
+            I'm a fractional consultant for education organizations, with 26 years of
+            experience in this space and 17 years as the founding principal of
+            Thrive Home School Academy.
             <br><br>
-            People who've worked with me have one word for what I do: <strong>catalyst</strong>.
-            I show up where things are stuck, ask the right questions, and help people and
-            organizations move — toward stronger teams, clearer vision, and real results.
+            Here's what I do: I help growing education organizations (homeschool programs,
+            enrichment centers, charter schools, districts) see what's not working in their
+            operations, develop stronger leaders, and scale enrollment without losing
+            their soul.
             <br><br>
-            Across six ventures, one thread runs through everything: honest support,
-            practical tools, and the belief that you deserve to build something that lasts.
+            I work on monthly retainers — focused strategic thinking sessions where I'm
+            your thinking partner on culture, systems, leadership, and growth. My clients
+            have told me I'm a <strong>catalyst</strong> — I show up where things feel
+            stuck, ask the right questions, and help you move toward stronger teams,
+            clearer vision, and real results.
+            <br><br>
+            I also design websites and consult on AI strategy for small businesses, but my
+            primary focus right now is helping education organizations navigate this
+            pivotal moment of growth in Colorado.
+            <br><br>
+            Whether you need help evaluating your systems, building your leadership bench,
+            or figuring out how to grow without losing what makes you special — I'd love
+            to talk.
           </p>
         </div>
       </div>
@@ -599,8 +560,8 @@
         <p class="section-eyebrow">Get In Touch</p>
         <h2 class="section-title">Let's Work Together</h2>
         <p class="contact-subtitle">
-          Whether you need a website, AI coaching, a leadership workshop, or just
-          want to explore what's possible — I'd love to hear from you.
+          Whether you're an education organization looking for strategic support,
+          need a website, or want to explore what's possible — I'd love to hear from you.
         </p>
         <form class="contact-form" action="https://formspree.io/f/mykqerno" method="POST">
           <div class="form-row">
@@ -617,12 +578,9 @@
             <label for="service">What are you interested in?</label>
             <select id="service" name="service">
               <option value="" disabled selected>Select a service...</option>
+              <option value="Fractional Advisory Consulting">Fractional Advisory Consulting</option>
               <option value="Web Design & AI Consulting">Web Design &amp; AI Consulting</option>
-              <option value="Leadership Consulting & Workshops">Leadership Consulting &amp; Workshops</option>
               <option value="Heartwood Vault">Heartwood Vault</option>
-              <option value="Life Coaching (Bloom Reimagined)">Life Coaching (Bloom Reimagined)</option>
-              <option value="Colorado Homeschooling Evaluations">Colorado Homeschooling Evaluations</option>
-              <option value="Nerd Hive Apparel">Nerd Hive Apparel</option>
               <option value="General Inquiry">General Inquiry</option>
             </select>
           </div>
