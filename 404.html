@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found | Yvonne Padilla</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #ffffff; --off-white: #F8F7FC; --coral: #F05A3A; --teal: #2ABFBF;
+      --violet: #7C3AED; --violet-deep: #5B21B6; --text: #1F2937; --muted: #6B7280;
+    }
+    body {
+      min-height: 100vh; display: flex; flex-direction: column;
+      background: var(--white); color: var(--text); font-family: 'Inter', sans-serif;
+    }
+    .nav {
+      padding: 0.75rem 2rem; border-bottom: 1px solid rgba(0,0,0,0.06);
+      display: flex; align-items: center;
+    }
+    .nav img { width: 40px; height: 40px; display: block; }
+    main {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      padding: 4rem 1.5rem; text-align: center; position: relative; overflow: hidden;
+    }
+    main::before {
+      content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,0.10) 0%, transparent 70%);
+      top: -120px; left: -120px; pointer-events: none;
+    }
+    .inner { position: relative; max-width: 560px; }
+    .eyebrow {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--violet); margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin-bottom: 1rem;
+    }
+    p.body { font-size: 1.05rem; line-height: 1.75; color: #4B5563; margin-bottom: 2rem; }
+    .cta {
+      display: inline-block; padding: 0.85rem 2.4rem; background: var(--violet);
+      color: white; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.32);
+    }
+    .cta:hover { background: var(--violet-deep); }
+    .color-bar {
+      height: 5px;
+      background: linear-gradient(90deg, var(--violet) 0%, var(--violet-deep) 45%, var(--teal) 78%, var(--coral) 100%);
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="/" aria-label="Yvonne Padilla — home">
+      <img src="/images/yp-mark-128.png" alt="Yvonne Padilla" width="40" height="40" />
+    </a>
+  </nav>
+  <main>
+    <div class="inner">
+      <p class="eyebrow">Page not found</p>
+      <h1>This page isn't here.</h1>
+      <p class="body">
+        The link may be old, or the address may have a typo.
+        Everything on this site lives on the home page.
+      </p>
+      <a class="cta" href="/">Go to the home page</a>
+    </div>
+  </main>
+  <div class="color-bar"></div>
+</body>
+</html>
