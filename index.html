@@ -180,17 +180,17 @@
     }
     .hero-inner {
       position: relative; z-index: 1; max-width: 1040px; margin: 0 auto;
-      display: grid; grid-template-columns: minmax(0, 1fr) 340px;
+      display: grid; grid-template-columns: minmax(0, 1fr) 272px;
       gap: 4rem; align-items: center; text-align: left;
     }
-    .hero-photo-wrap { position: relative; width: 340px; }
+    .hero-photo-wrap { position: relative; width: 272px; }
     .hero-photo {
       display: block; width: 100%; height: auto; border-radius: 16px;
       box-shadow: 0 8px 32px rgba(124,58,237,0.15);
     }
     .hero-name {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+      font-size: clamp(1.7rem, 2.72vw, 2.45rem);
       font-weight: 700; line-height: 1.15; color: var(--text); margin-bottom: 0.35rem;
     }
     .hero-name .accent { color: var(--violet); }
@@ -200,7 +200,7 @@
     }
     .hero-lede {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2rem, 4.4vw, 3.25rem);
+      font-size: clamp(2rem, 3.4vw, 2.875rem);
       font-weight: 700;
       line-height: 1.15; color: var(--text);
       margin: 0 0 1.25rem;
@@ -210,7 +210,7 @@
       color: #4B5563; line-height: 1.75; margin-bottom: 2rem;
       max-width: 540px;
     }
-    .hero-tagline strong { color: var(--text); font-weight: 600; }
+    .hero-tagline strong { color: var(--text); font-weight: 600; white-space: nowrap; }
     .hero-cta {
       display: inline-block;
       padding: 0.85rem 2.4rem;
@@ -223,11 +223,8 @@
       transition: background 0.2s, transform 0.2s;
       margin-bottom: 1.75rem;
     }
+    .hero-text .hero-cta { margin-bottom: 0; }
     .hero-cta:hover { background: var(--violet-deep); transform: translateY(-2px); }
-    .hero-location {
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--muted);
-    }
 
     /* ── COLOR BAR ── */
     .color-bar {
@@ -450,8 +447,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: minmax(0, 1fr) 280px; gap: 2.5rem; }
-      .hero-photo-wrap { width: 280px; }
+      .hero-inner { grid-template-columns: minmax(0, 1fr) 224px; gap: 2.5rem; }
+      .hero-photo-wrap { width: 224px; }
     }
     @media (max-width: 760px) {
       .hero { padding: 2.25rem 1.25rem 2.75rem; }
@@ -520,12 +517,10 @@
           </h1>
           <p class="hero-tagline">
             I help founders and leaders of growing organizations <strong>find what it is</strong>,
-            then build the fix and hand it off. Seventeen years as a founding principal taught me
-            where to look.
+            then build the fix and hand it off.
           </p>
 
           <a class="hero-cta" href="#contact">Start a Conversation</a>
-          <p class="hero-location">Colorado Springs &amp; Beyond</p>
         </div>
 
         <div class="hero-photo-wrap">
