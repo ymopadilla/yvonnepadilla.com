@@ -297,18 +297,6 @@
     }
     .step p { font-size: 0.92rem; line-height: 1.75; color: #4B5563; }
 
-    .pullquote {
-      max-width: 720px; margin: 4rem auto 0;
-      background: var(--violet-pale);
-      border-radius: 16px;
-      padding: 2.25rem 2.5rem;
-      text-align: center;
-    }
-    .pullquote p {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.15rem, 2.6vw, 1.45rem);
-      line-height: 1.55; color: var(--violet-deep);
-    }
 
     /* ── ENGAGEMENT ── */
     .engagement { background: var(--off-white); padding: 5rem 2rem 4.5rem; }
@@ -326,10 +314,6 @@
       font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.55rem;
     }
     .eng-card p { font-size: 0.9rem; line-height: 1.7; color: #4B5563; }
-    .eng-note {
-      max-width: 700px; margin: 2.5rem auto 0; text-align: center;
-      font-size: 0.95rem; line-height: 1.75; color: var(--muted);
-    }
 
     /* ── SECOND CTA ── */
     .cta-band { background: var(--violet-pale); padding: 4rem 2rem 4.25rem; text-align: center; }
@@ -362,7 +346,7 @@
     .about-text .section-eyebrow { margin-bottom: 0.4rem; }
     .about-text .section-title { margin-bottom: 1.25rem; font-size: clamp(1.6rem, 3vw, 2.2rem); text-align: left; }
     .about-bio { font-size: 1rem; line-height: 1.85; color: #4B5563; }
-    .about-bio strong { color: var(--text); }
+    .about-bio + .about-bio { margin-top: 1.1rem; }
     .about-credits {
       display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem;
     }
@@ -633,13 +617,6 @@
           </p>
         </div>
       </div>
-
-      <div class="pullquote">
-        <p>
-          I'm not a marketer or an execution hire. I'm a strategic problem-solver who sits
-          in the space between sessions and does the thinking that makes the difference.
-        </p>
-      </div>
     </section>
 
     <!-- ── ENGAGEMENT ── -->
@@ -676,13 +653,6 @@
           </p>
         </div>
       </div>
-
-      <p class="eng-note">
-        I work with growing organizations across education, nonprofits, and services — anywhere
-        the old way of running things starts to strain as you grow. My deepest expertise is in
-        education, where I built operational systems for a growing school, one of the most
-        stakeholder-dense environments there is.
-      </p>
     </section>
 
     <!-- ── SECOND CTA ── -->
@@ -703,38 +673,29 @@
       <div class="about-inner">
         <div class="about-photo-wrap">
           <div class="photo-ring"></div>
-          <img class="about-photo" src="images/yvonne-about-260.webp"
-               srcset="images/yvonne-about-260.webp 1x, images/yvonne-about-520.webp 2x"
-               width="260" height="208" alt="Yvonne Padilla" loading="lazy" decoding="async" />
+          <img class="about-photo" src="images/yvonne-about-denim-260.webp"
+               srcset="images/yvonne-about-denim-260.webp 1x, images/yvonne-about-denim-520.webp 2x"
+               width="260" height="325" alt="Yvonne Padilla" loading="lazy" decoding="async" />
         </div>
         <div class="about-text">
           <p class="section-eyebrow">About</p>
           <h2 class="section-title">Hi, I'm Yvonne</h2>
           <p class="about-bio">
-            After twenty-six years leading inside complex organizations, I know how to listen,
-            diagnose what's actually going on, and create solutions built around what you're
-            trying to accomplish — not around what I already know how to sell.
-            <br><br>
-            For seventeen of those years I was the founding principal of Thrive Home School
-            Academy. That role taught me how to listen into complex problems, navigate
-            stakeholder dynamics where everyone has a legitimate stake and none of them agree,
-            and build systems that hold as an organization grows. A school is an unforgiving
-            training ground for that work — and those skills transfer directly, whether you're
-            running a school, a nonprofit, or a growing business.
-            <br><br>
-            Now I do that work fractionally. I diagnose what's not working, consider your goals
-            for your staff and the people you serve, and help you build operating systems that
-            support real growth. My clients have called me a <strong>catalyst</strong> — I show
-            up where things feel stuck, ask the questions nobody's asking, and help you move
-            toward stronger teams and a clearer path.
-            <br><br>
-            If something in your organization isn't working and you can't quite name it,
-            that's exactly the conversation I want to have.
+            I spent twenty-six years leading inside complex organizations, seventeen of them
+            as the founding principal of Thrive Home School Academy. A school is an
+            unforgiving training ground: everyone has a legitimate stake, and none of them
+            agree. It taught me how to listen into complex problems and build systems that
+            hold as an organization grows.
+          </p>
+          <p class="about-bio">
+            Now I do that work fractionally, for schools, nonprofits, and growing businesses.
+            I find what's not working, build the fix around your goals, and hand it off. If
+            something in your organization feels off and you can't quite name it, that's
+            exactly the conversation I want to have.
           </p>
           <div class="about-credits">
             <span class="credit">17 years founding principal</span>
             <span class="credit">Leadership, culture &amp; systems</span>
-            <span class="credit">Systems &amp; culture through growth</span>
             <span class="credit">Colorado Springs</span>
           </div>
         </div>
