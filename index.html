@@ -331,6 +331,13 @@
       font-size: 0.95rem; line-height: 1.75; color: var(--muted);
     }
 
+    /* ── SECOND CTA ── */
+    .cta-band { background: var(--violet-pale); padding: 4rem 2rem 4.25rem; text-align: center; }
+    .cta-band-inner { max-width: 620px; margin: 0 auto; }
+    .cta-band .section-title { margin-bottom: 0.75rem; }
+    .cta-band-text { font-size: 1.05rem; line-height: 1.75; color: #4B5563; margin-bottom: 1.75rem; }
+    .cta-band .hero-cta { margin-bottom: 0; }
+
     /* ── ABOUT ── */
     .about { background: var(--white); padding: 5rem 2rem 5.5rem; }
     .about-inner {
@@ -414,7 +421,7 @@
     .thanks h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; margin-bottom: 0.6rem; color: var(--text); }
     .thanks p { font-size: 1rem; line-height: 1.7; color: #4B5563; }
     .thanks:focus { outline: none; }
-    .todo-placeholder { background: #FEF3C7; color: #92400E; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+    .privacy-note { font-size: 0.8rem; line-height: 1.6; color: var(--muted); margin-top: 1.75rem; max-width: 480px; margin-left: auto; margin-right: auto; }
     .form-group textarea { resize: vertical; min-height: 130px; }
     .form-submit {
       display: inline-block;
@@ -640,6 +647,10 @@
       <div class="section-header">
         <p class="section-eyebrow">Working Together</p>
         <h2 class="section-title">What an engagement looks like</h2>
+        <p class="section-sub">
+          Every engagement starts with a diagnostic. From there, we decide together what
+          comes next.
+        </p>
       </div>
 
       <div class="eng-grid">
@@ -672,6 +683,17 @@
         education, where I built operational systems for a growing school, one of the most
         stakeholder-dense environments there is.
       </p>
+    </section>
+
+    <!-- ── SECOND CTA ── -->
+    <section class="cta-band" aria-labelledby="cta-band-title">
+      <div class="cta-band-inner">
+        <h2 class="section-title" id="cta-band-title">Not sure where to start?</h2>
+        <p class="cta-band-text">
+          Tell me what's going on. I'll reach out to set up a time to talk.
+        </p>
+        <a class="hero-cta" href="#contact">Start a Conversation</a>
+      </div>
     </section>
 
     <div class="color-bar"></div>
@@ -711,7 +733,7 @@
           </p>
           <div class="about-credits">
             <span class="credit">17 years founding principal</span>
-            <span class="credit">Leadership &amp; hiring systems</span>
+            <span class="credit">Leadership, culture &amp; systems</span>
             <span class="credit">Systems &amp; culture through growth</span>
             <span class="credit">Colorado Springs</span>
           </div>
@@ -732,8 +754,7 @@
         <p class="contact-subtitle">
           You don't need a diagnosis before you reach out — that's my job.
           Tell me what you're noticing, and we'll start there.
-          <!-- TODO(Yvonne): replace the placeholder below with the response-time line -->
-          <br /><span class="todo-placeholder" data-todo="response-time">[Response-time line goes here]</span>
+          I read every message personally and reply within two business days.
         </p>
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/mykqerno" method="POST">
           <p class="form-note"><span class="req" aria-hidden="true">*</span> Required</p>
@@ -776,12 +797,16 @@
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
         <div class="thanks" id="form-thanks" tabindex="-1" hidden>
-          <h3>Thank you. Your message is on its way.</h3>
+          <h3>Thank you.</h3>
           <p>
-            <!-- TODO(Yvonne): replace the placeholder below with the response-time line -->
-            <span class="todo-placeholder" data-todo="response-time">[Response-time line goes here]</span>
+            I've got your message and will reply within two business days to find a time
+            to talk.
           </p>
         </div>
+        <p class="privacy-note">
+          I use your information only to reply to you, and never sell or share it.
+          Site visits are counted anonymously, with no cookies.
+        </p>
       </div>
     </section>
   </main>
@@ -854,6 +879,8 @@
       });
     })();
   </script>
+
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "711c5b0e4eae44b2bc8e6b0b80d42266"}'></script><!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>
