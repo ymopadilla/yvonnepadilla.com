@@ -579,6 +579,12 @@
     .credit { border-radius: 4px; }
     .form-group input, .form-group select, .form-group textarea { border-radius: 6px; }
 
+    .t-role a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+    .t-role a:hover { color: var(--violet-deep); text-decoration-color: currentColor; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .about-signature { display: block; width: 190px; height: auto; margin: 1.25rem 0 0 -0.4rem; }
+    @media (max-width: 650px) { .about-signature { margin: 1.25rem auto 0; } }
+
     /* ── FAQ ── */
     .faq { background: var(--white); padding: 4.5rem 2rem 4.5rem; border-top: 1px solid var(--line); }
     .faq .section-header { text-align: left; max-width: 880px; margin-bottom: 2rem; }
@@ -822,8 +828,8 @@
           </blockquote>
           <p class="t-stat"><strong>52.7%</strong> less workload after the redesign</p>
           <figcaption class="t-who">
-            <span class="t-name">A.B.</span>
-            <span class="t-role">Owner, Colorado Homeschooling</span>
+            <span class="t-name">Amanda Bench</span>
+            <span class="t-role">Owner, <a href="https://www.coloradohomeschooling.com/" target="_blank" rel="noopener">Colorado Homeschooling<span class="sr-only"> (opens in a new tab)</span></a></span>
           </figcaption>
           <details class="t-full">
             <summary><span class="t-more">Read more</span><span class="t-less">Show less</span></summary>
@@ -986,6 +992,7 @@
             something in your organization feels off and you can't quite name it, that's
             exactly the conversation I want to have.
           </p>
+          <img class="about-signature" src="images/yvonne-signature.webp" width="224" height="114" alt="Signed, Yvonne Padilla" loading="lazy" decoding="async" />
           <div class="about-credits">
             <span class="credit">17 years founding principal</span>
             <span class="credit">Leadership, culture &amp; systems</span>
