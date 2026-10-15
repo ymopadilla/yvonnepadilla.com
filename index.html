@@ -312,6 +312,61 @@
     }
     .eng-card p { font-size: 0.9rem; line-height: 1.7; color: #4B5563; }
 
+    /* ── TESTIMONIALS ── */
+    .results { background: var(--white); padding: 5rem 2rem 5rem; }
+    .testimonials {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem;
+      align-items: start;
+    }
+    .testimonial {
+      background: var(--off-white); border-radius: 16px;
+      border-top: 4px solid var(--violet);
+      padding: 2rem 1.9rem 1.6rem;
+    }
+    .testimonial:nth-child(2) { border-top-color: var(--teal); }
+    .t-quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.08rem; line-height: 1.65; color: var(--text);
+      position: relative; padding-top: 1.6rem;
+    }
+    .t-quote::before {
+      content: '\201C'; position: absolute; top: -0.9rem; left: -0.15rem;
+      font-size: 4rem; line-height: 1; color: var(--violet-pale);
+    }
+    .t-quote p + p { margin-top: 0.85rem; }
+    .t-name { margin-top: 1.4rem; font-weight: 700; font-size: 0.95rem; color: var(--text); }
+    .t-role { font-size: 0.82rem; color: var(--muted); margin-top: 0.15rem; }
+    .t-case {
+      margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      display: grid; gap: 0.8rem;
+    }
+    .t-case dt {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--violet-deep);
+    }
+    .t-case dd { font-size: 0.9rem; line-height: 1.6; color: #4B5563; margin-top: 0.15rem; }
+    .t-full { margin-top: 1.4rem; }
+    .t-full summary {
+      cursor: pointer; display: inline-block; list-style: none;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--violet); padding: 0.3rem 0; border-bottom: 1.5px solid currentColor;
+    }
+    .t-full summary::-webkit-details-marker { display: none; }
+    .t-full summary::after { content: ' +'; }
+    .t-full[open] summary::after { content: ' \2212'; }
+    .t-full summary:hover { color: var(--violet-deep); }
+    .t-full summary:focus-visible { outline: 3px solid rgba(124,58,237,0.35); outline-offset: 3px; border-radius: 2px; }
+    .t-full-text { margin-top: 1.1rem; font-size: 0.93rem; line-height: 1.8; color: #374151; }
+    .t-full-text p + p { margin-top: 0.9rem; }
+    @media (max-width: 820px) {
+      .testimonials { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .results { padding: 4rem 1.25rem; }
+      .testimonial { padding: 1.75rem 1.35rem 1.4rem; }
+    }
+
     /* ── SECOND CTA ── */
     .cta-band { background: var(--violet-pale); padding: 4rem 2rem 4.25rem; text-align: center; }
     .cta-band-inner { max-width: 620px; margin: 0 auto; }
@@ -495,6 +550,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#approach">Approach</a></li>
+      <li><a href="#results">Results</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a class="nav-li" href="https://www.linkedin.com/in/yvonnepadilla" target="_blank" rel="noopener" aria-label="Yvonne Padilla on LinkedIn">
@@ -647,6 +703,140 @@
             one person and your bench gets deeper.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section class="results" id="results" aria-labelledby="results-title">
+      <div class="section-header">
+        <p class="section-eyebrow">Results</p>
+        <h2 class="section-title" id="results-title">In their words</h2>
+      </div>
+
+      <div class="testimonials">
+
+        <article class="testimonial">
+          <blockquote class="t-quote">
+            <p>
+              When I brought my business to Yvonne, I knew something was wrong, but I
+              couldn't name what it was. I was tired, doing 100% of the service delivery and
+              admin myself, and I was seriously considering selling.
+            </p>
+            <p>
+              She identified that the real problem was structural: my internal process wasn't
+              sustainable, and no amount of effort was going to fix that without changing the
+              process itself.
+            </p>
+            <p>
+              I'd recommend her to any owner who knows something is wrong but can't see what.
+            </p>
+          </blockquote>
+          <p class="t-name">Amanda</p>
+          <p class="t-role">Owner, Colorado Homeschooling</p>
+
+          <dl class="t-case">
+            <div><dt>What felt off</dt><dd>The business had outgrown what one person could manage, and she was ready to sell.</dd></div>
+            <div><dt>What we found</dt><dd>The problem was the process, not her effort. The whole business ran through one person's email.</dd></div>
+            <div><dt>What changed</dt><dd>Less work, more money. Workload down 52.7%, 79% of clients chose the new format, margins went up, and she kept the business.</dd></div>
+          </dl>
+
+          <details class="t-full">
+            <summary>Read the full testimonial</summary>
+            <div class="t-full-text">
+              <p>
+                "When I brought my business to Yvonne, I knew something was wrong, but I
+                couldn't name what it was. I was tired, doing 100% of the service delivery and
+                admin myself, and I was seriously considering selling. What Yvonne did wasn't
+                just listen — she listened through the noise to figure out what I was actually
+                saying, even when I couldn't articulate it myself. She identified that the real
+                problem was structural: my internal process wasn't sustainable, and no amount of
+                effort was going to fix that without changing the process itself. That was the
+                piece I couldn't see on my own.
+              </p>
+              <p>
+                She refused to let me throw the business away. Instead, she rebuilt the systems
+                underneath it — first creating infrastructure that let the business run across
+                multiple users, then redesigning the evaluation process itself to be dramatically
+                more efficient. In 2026 alone, that shift cut evaluation time by more than half.
+                We also restructured how services were priced, which strengthened the business's
+                margins.
+              </p>
+              <p>
+                Six months after we started, I went from 'considering an exit' to confident the
+                business actually works — and works without me having to do everything myself.
+                Yvonne has this rare mix of being able to figure out what people are saying when
+                they don't even know what they're saying themselves, while also building the
+                practical systems to fix it. She doesn't just make a business more efficient —
+                she makes it scalable. I'd recommend her to any owner who knows something is
+                wrong but can't see what."
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <article class="testimonial">
+          <blockquote class="t-quote">
+            <p>
+              When we started talking with Yvonne, we owned a franchise, but we didn't have a
+              clear focus or path. She asked questions nobody had asked us. She found a need for
+              what we offered in home schools before we even knew there was one.
+            </p>
+            <p>
+              Over two years, her honest feedback showed us what we were missing: how to group
+              kids by age, how many coaches each group needs, and what has to be in place before
+              we launch. It became our roadmap. She told us our shortfalls, and that's exactly
+              what we needed.
+            </p>
+          </blockquote>
+          <p class="t-name">Akai and Angel Clifford</p>
+          <p class="t-role">Owners, Elevation Sports (an NZone Sports franchise)</p>
+
+          <dl class="t-case">
+            <div><dt>What felt off</dt><dd>They owned a franchise with no clear focus or path.</dd></div>
+            <div><dt>What we found</dt><dd>A home school market nobody in the franchise had considered.</dd></div>
+            <div><dt>What changed</dt><dd>Their first home school program, two years of revenue, and a roadmap for what's next.</dd></div>
+          </dl>
+
+          <details class="t-full">
+            <summary>Read the full testimonial</summary>
+            <div class="t-full-text">
+              <p>
+                "When we first started talking with Yvonne about NZone Sports, we had a vision and
+                training, but we were still looking for the right opportunity to put it all into
+                action. We owned a franchise, but we didn't have a clear focus or path.
+              </p>
+              <p>
+                Yvonne asked questions nobody had asked us. She found a need for what we offered
+                in home schools before we even knew there was one. As a school leader, she saw
+                what her students were missing, and she brought us in to run an after-school
+                sports program for them. She truly believed her students deserved a physical
+                fitness program. It was the first home school program we ever had. Partnering
+                with home schools had never come up anywhere in our franchise, and it was a
+                refreshing idea.
+              </p>
+              <p>
+                She did more than bring us in. She brought the program to us. Every time we hit
+                a problem, she had a solution, and she helped us keep it from happening again.
+                Over two years, the partnership gave us revenue, but more importantly, it gave us
+                a baseline. Yvonne's honest feedback showed us what we were missing: how to group
+                kids by age, how many coaches each group needs, and what has to be in place
+                before we launch. Her feedback became our roadmap, and we're using it now as we
+                plan what's next.
+              </p>
+              <p>
+                More than anything, Yvonne helped us see what NZone could be: a specialized home
+                school program, something the franchise's curriculum didn't offer at the time.
+                She's a problem solver with great ideas. She's a good listener, she's open to
+                feedback, and she is patient in the problem-solving process. She told us our
+                shortfalls, and that's exactly what we needed.
+              </p>
+              <p>
+                Anyone who works with Yvonne is going to get more than they expect."
+              </p>
+            </div>
+          </details>
+        </article>
+
       </div>
     </section>
 
