@@ -246,6 +246,11 @@
       padding: 1.25rem 1.4rem;
       font-size: 0.95rem; line-height: 1.6; color: #374151;
     }
+    .symptom:nth-child(2)  { border-left-color: var(--teal); }
+    .symptom:nth-child(3)  { border-left-color: var(--coral); }
+    .symptom:nth-child(4)  { border-left-color: var(--gold); }
+    .symptom:nth-child(5)  { border-left-color: var(--green); }
+    .symptom:nth-child(6)  { border-left-color: var(--violet-deep); }
     .symptoms-close {
       max-width: 640px; margin: 2.75rem auto 0; text-align: center;
       font-family: 'Fraunces', Georgia, serif;
@@ -363,18 +368,6 @@
     }
     .symptoms .section-sub, .approach .section-sub, .engagement .section-sub { max-width: 620px; }
 
-    /* Symptoms as an editorial numbered list, not cards */
-    .symptom-grid { gap: 0 3rem; counter-reset: sym; }
-    .symptom {
-      background: none; border-radius: 0; box-shadow: none; border-left: 0;
-      border-top: 1px solid #D9D6E3; padding: 1.15rem 0 1.15rem 2.6rem; position: relative;
-      font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; line-height: 1.5; color: var(--text);
-    }
-    .symptom::before {
-      counter-increment: sym; content: counter(sym, decimal-leading-zero);
-      position: absolute; left: 0; top: 1.4rem;
-      font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: var(--violet);
-    }
     .symptoms-close { text-align: left; max-width: 880px; }
 
     /* Approach: pull line with a rule, visible step numbers */
@@ -736,9 +729,9 @@
         <div class="eng-card">
           <h3 class="eng-name">Monthly retainer</h3>
           <p>
-            Twenty hours of my time each month, used however your situation needs it:
-            strategy sessions, working time with your team, or building the systems.
-            The thinking I do between sessions comes with it.
+            Ongoing support shaped around what your organization needs most each month:
+            strategy sessions, time with your team, or building the systems. We set the
+            scope together and adjust it as things change.
           </p>
         </div>
         <div class="eng-card">
