@@ -360,7 +360,7 @@
     }
     .hero-proof blockquote p::before { content: '\201C'; color: var(--violet); }
     .hero-proof blockquote p::after { content: '\201D'; color: var(--violet); }
-    .hero-proof figcaption { margin-top: 0.4rem; font-size: 0.8rem; color: var(--muted); }
+    .hero-proof figcaption { margin-top: 0.4rem; font-size: 0.875rem; color: var(--muted); }
 
     /* Left-aligned headers break the centered-template rhythm */
     .symptoms .section-header, .approach .section-header, .engagement .section-header {
@@ -421,6 +421,7 @@
 
     /* Testimonial stat */
     .t-stat { margin-top: 1rem; font-size: 0.85rem; color: var(--body); }
+    .t-stat + .t-stat { margin-top: 0.35rem; }
     .t-stat strong { font-family: 'Fraunces', Georgia, serif; font-size: 1.5rem; color: var(--violet-deep); margin-right: 0.3rem; }
 
     /* Phone in contact */
@@ -484,12 +485,12 @@
     .contact-inner { max-width: 620px; margin: 0 auto; text-align: center; }
     .contact-inner .section-eyebrow { margin-bottom: 0.4rem; }
     .contact-inner .section-title { margin-bottom: 0.5rem; }
-    .contact-subtitle { font-size: 1rem; color: var(--muted); margin-bottom: 2.5rem; line-height: 1.7; }
+    .contact-subtitle { font-size: 1rem; color: var(--muted); margin-bottom: 2.5rem; line-height: 1.7; text-align: left; }
     .contact-form { display: flex; flex-direction: column; gap: 1rem; text-align: left; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
     .form-group label {
-      font-size: 0.78rem; font-weight: 600; color: var(--text);
+      font-size: 0.875rem; font-weight: 600; color: var(--text);
       letter-spacing: 0.04em; text-transform: uppercase;
     }
     .form-group input,
@@ -522,7 +523,7 @@
     .thanks h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.5rem; margin-bottom: 0.6rem; color: var(--text); }
     .thanks p { font-size: 1rem; line-height: 1.7; color: var(--body); }
     .thanks:focus { outline: none; }
-    .privacy-note { font-size: 0.8rem; line-height: 1.6; color: var(--muted); margin-top: 1.75rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .privacy-note { text-align: left; font-size: 0.875rem; line-height: 1.6; color: var(--muted); margin-top: 1.75rem; max-width: 480px; margin-left: auto; margin-right: auto; }
     .form-group textarea { resize: vertical; min-height: 130px; }
     .form-submit {
       display: inline-block;
@@ -631,6 +632,7 @@
       .about-photo-wrap { width: 100%; max-width: 240px; margin: 0 auto; }
       .about-text { text-align: center; }
       .about-text .section-title { text-align: center; }
+      .about-text p:not(.section-eyebrow) { text-align: left; }
       .about-credits { justify-content: center; }
       .form-row { grid-template-columns: 1fr; }
       .footer-links { gap: 1rem; }
@@ -691,7 +693,7 @@
           </div>
           <figure class="hero-proof">
             <blockquote><p>Yvonne asked questions nobody had asked us.</p></blockquote>
-            <figcaption>Akai and Angel Clifford, Owners, Elevation Sports</figcaption>
+            <figcaption>Akai and Angel Clifford, Owners, Elevation Sports (an NZone Sports franchise)</figcaption>
           </figure>
         </div>
         <div class="hero-photo-wrap">
@@ -763,15 +765,15 @@
         <div class="step">
           <h3 class="step-name">Diagnose</h3>
           <p>
-            Symptoms are easy to name. Root causes are not. I trace the turnover, the
-            bottleneck, or the culture drift back to the decision, structure, or missing system actually producing it. Then I tell you plainly what I find.
+            I trace the turnover or the bottleneck back to whatever is actually producing it,
+            usually a decision nobody revisited or a system nobody built. Then I tell you plainly what I find.
           </p>
         </div>
         <div class="step">
           <h3 class="step-name">Build</h3>
           <p>
-            Then we build for your goals, not a template: the operating systems, leadership
-            bench, and hiring practices that hold up as you grow. Then I hand it off. You keep
+            We build around your goals: the systems and the leadership bench to hold up
+            as you grow. Then I hand it off. You keep
             what makes your organization worth growing, and you don't need me to run it.
           </p>
         </div>
@@ -827,6 +829,7 @@
             <p>I'd recommend her to any owner who knows something is wrong but can't see what.</p>
           </blockquote>
           <p class="t-stat"><strong>52.7%</strong> less workload after the redesign</p>
+          <p class="t-stat"><strong>+6 points</strong> profit margin, even after paying for a consultant</p>
           <figcaption class="t-who">
             <span class="t-name">Amanda Bench</span>
             <span class="t-role">Owner, <a href="https://www.coloradohomeschooling.com/" target="_blank" rel="noopener">Colorado Homeschooling<span class="sr-only"> (opens in a new tab)</span></a></span>
@@ -956,7 +959,7 @@
     <!-- ── SECOND CTA ── -->
     <section class="cta-band" aria-labelledby="cta-band-title">
       <div class="cta-band-inner">
-        <h2 class="section-title" id="cta-band-title">Not sure where to start?</h2>
+        <h2 class="section-title" id="cta-band-title">Start with what you're noticing.</h2>
         <p class="cta-band-text">
           Tell me what's going on. I'll reach out to set up a time to talk.
         </p>
