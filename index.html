@@ -347,6 +347,11 @@
       .t-quote p { font-size: 1.3rem; }
     }
     @media (prefers-reduced-motion: reduce) { .t-full summary::after { transition: none; } }
+    /* Nov 9: keep the header on-screen at 320px; LinkedIn stays in the footer */
+    @media (max-width: 400px) {
+      .nav .nav-links { gap: 0.85rem; }
+      .nav .nav-links li:has(.nav-li) { display: none; }
+    }
 
     /* ── DESIGN REFRESH (Oct 2026) ── */
     .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem 1.5rem; }
@@ -643,6 +648,7 @@
       .nav { padding: 0.7rem 1rem; }
       .nav-links { gap: 1rem; }
       .nav-links a { font-size: 0.68rem; letter-spacing: 0.05em; }
+      .nav-links a { display: inline-block; padding: 0.75rem 0; }
       .nav-logo { width: 32px; height: 32px; }
       .nav-li .nav-li-label { display: none; }
       .nav-li svg { width: 18px; height: 18px; }
