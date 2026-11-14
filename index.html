@@ -14,7 +14,7 @@
   <!-- ── SEO: Open Graph ── -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yvonnepadilla.com/" />
-  <meta property="og:title" content="Yvonne Padilla | Uncover what's not working. Improve it together." />
+  <meta property="og:title" content="Yvonne Padilla | Something's not working. Let's name it." />
   <meta property="og:description" content="I help founders and leaders of growing organizations uncover what's not working, then make strategic, data-informed changes together with their teams." />
   <meta property="og:image" content="https://yvonnepadilla.com/og-image-v2.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -25,7 +25,7 @@
 
   <!-- ── SEO: Twitter/X Card ── -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Yvonne Padilla | Uncover what's not working. Improve it together." />
+  <meta name="twitter:title" content="Yvonne Padilla | Something's not working. Let's name it." />
   <meta name="twitter:description" content="I help founders and leaders of growing organizations uncover what's not working, then make strategic, data-informed changes together with their teams." />
   <meta name="twitter:image" content="https://yvonnepadilla.com/og-image-v2.jpg" />
 
@@ -269,7 +269,7 @@
     .about-photo .polaroid { padding: 14px 14px 44px; transform: rotate(-2deg); box-shadow: 0 14px 32px rgba(36,33,46,.14); }
     .about-text { flex: 2 1 460px; }
     .about-text .h2 { margin-bottom: 24px; }
-    .about-text p.body { color: var(--body); }
+    .about-text p.body { color: var(--body); max-width: 680px; }
     .about-text p.body + p.body { margin-top: 18px; }
     .sign { margin-top: 24px; display: flex; align-items: center; gap: 12px 28px; flex-wrap: wrap; }
     .sign img { width: 200px; }
@@ -667,6 +667,23 @@
       var thanks = document.getElementById('form-thanks');
       if (!form || !window.fetch) return;
 
+      // Keep a draft of the message in this tab only, so a refresh or an
+      // accidental back-and-forward doesn't erase it. Cleared after sending.
+      var draftKey = 'yp-contact-draft';
+      var draftFields = ['name', 'email', 'organization', 'service', 'message'];
+      try {
+        var saved = JSON.parse(sessionStorage.getItem(draftKey) || '{}');
+        draftFields.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el && saved[id] && !el.value) el.value = saved[id];
+        });
+        form.addEventListener('input', function () {
+          var data = {};
+          draftFields.forEach(function (id) { var el = document.getElementById(id); if (el) data[id] = el.value; });
+          sessionStorage.setItem(draftKey, JSON.stringify(data));
+        });
+      } catch (e) { /* storage unavailable; the form still works */ }
+
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var button = form.querySelector('.form-submit');
@@ -681,6 +698,7 @@
           headers: { 'Accept': 'application/json' }
         }).then(function (res) {
           if (res.ok) {
+            try { sessionStorage.removeItem(draftKey); } catch (e) {}
             form.hidden = true;
             thanks.hidden = false;
             thanks.focus();
