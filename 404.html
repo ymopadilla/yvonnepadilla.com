@@ -10,71 +10,34 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Caveat:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --white: #ffffff; --off-white: #F7F5FA; --coral: #E2603D; --teal: #4FA89B;
-      --violet: #6B44D4; --violet-deep: #4A2A9E; --text: #24212E; --muted: #6A6577;
-    }
-    body {
-      min-height: 100vh; display: flex; flex-direction: column;
-      background: var(--white); color: var(--text); font-family: 'Atkinson Hyperlegible Next', 'Segoe UI', system-ui, sans-serif;
-    }
-    .nav {
-      padding: 0.75rem 2rem; border-bottom: 1px solid rgba(0,0,0,0.06);
-      display: flex; align-items: center;
-    }
-    .nav img { width: 40px; height: 40px; display: block; }
-    main {
-      flex: 1; display: flex; align-items: center; justify-content: center;
-      padding: 4rem 1.5rem; text-align: center; position: relative; overflow: hidden;
-    }
-    main::before {
-      content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(107,68,212,0.10) 0%, transparent 70%);
-      top: -120px; left: -120px; pointer-events: none;
-    }
-    .inner { position: relative; max-width: 560px; }
-    .eyebrow {
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em;
-      text-transform: uppercase; color: var(--violet); margin-bottom: 0.75rem;
-    }
-    h1 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin-bottom: 1rem;
-    }
-    p.body { font-size: 1.05rem; line-height: 1.75; color: #4B5563; margin-bottom: 2rem; }
-    .cta {
-      display: inline-block; padding: 0.85rem 2.4rem; background: var(--violet);
-      color: white; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
-      letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none;
-      box-shadow: 0 4px 24px rgba(107,68,212,0.32);
-    }
-    .cta:hover { background: var(--violet-deep); }
-    .color-bar {
-      height: 5px;
-      background: linear-gradient(90deg, var(--violet) 0%, var(--violet-deep) 45%, var(--teal) 78%, var(--coral) 100%);
-    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: #FFFFFF; color: #24212E; font-family: 'Atkinson Hyperlegible Next', 'Segoe UI', system-ui, sans-serif; font-size: 18px; line-height: 1.65; }
+    a:focus-visible { outline: 3px solid #6B44D4; outline-offset: 3px; }
+    header { border-bottom: 1px solid #24212E; padding: 20px clamp(20px, 4vw, 40px); }
+    header a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #24212E; text-decoration: none; font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 600; }
+    header img { width: 34px; height: 34px; }
+    main { flex: 1; width: 100%; max-width: 1280px; margin: 0 auto; padding: clamp(64px, 10vw, 120px) clamp(20px, 4vw, 40px); }
+    .label { margin: 0 0 16px; font-family: 'Caveat', cursive; font-weight: 500; font-size: 30px; color: #B84A2B; transform: rotate(-1.5deg); transform-origin: left; }
+    h1 { margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: clamp(44px, 7vw, 96px); line-height: 1; letter-spacing: -.03em; }
+    h1 em { font-weight: 400; color: #4A2A9E; }
+    p.body { margin: 28px 0 36px; max-width: 560px; color: #565062; }
+    .btn { display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; background: #24212E; color: #FFFFFF; font-weight: 700; text-decoration: none; }
+    .btn:hover { background: #4A2A9E; }
+    .stripe { height: 4px; background: linear-gradient(90deg, #6B44D4 0%, #4A2A9E 45%, #4FA89B 78%, #E2603D 100%); }
   </style>
 </head>
 <body>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="/" aria-label="Yvonne Padilla — home">
-      <img src="/images/yp-mark-128.png" alt="Yvonne Padilla" width="40" height="40" />
-    </a>
-  </nav>
+  <header>
+    <a href="/"><img src="/images/yp-mark-128.png" alt="" width="34" height="34" />Yvonne Padilla</a>
+  </header>
   <main>
-    <div class="inner">
-      <p class="eyebrow">Page not found</p>
-      <h1>This page isn't here.</h1>
-      <p class="body">
-        The link may be old, or the address may have a typo.
-        Everything on this site lives on the home page.
-      </p>
-      <a class="cta" href="/">Go to the home page</a>
-    </div>
+    <p class="label">page not found</p>
+    <h1>This page isn&rsquo;t here. <em>The home page is.</em></h1>
+    <p class="body">The link may be old, or the address may have a typo. Everything on this site lives on the home page.</p>
+    <a class="btn" href="/">Go to the home page</a>
   </main>
-  <div class="color-bar"></div>
+  <div class="stripe" aria-hidden="true"></div>
 </body>
 </html>
