@@ -349,7 +349,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#top" aria-label="Yvonne Padilla, back to top">
-        <img src="images/yp-mark-128.png" alt="" width="34" height="34" />
+        <img src="images/yp-mark-68.png" alt="" width="34" height="34" />
         <span>Yvonne Padilla</span>
       </a>
       <nav aria-label="Main">
@@ -378,7 +378,7 @@
         </div>
         <div class="polaroid-wrap">
           <figure class="polaroid">
-            <img src="images/yvonne-hero-340.webp" srcset="images/yvonne-hero-340.webp 340w, images/yvonne-hero-680.webp 680w" sizes="(max-width: 640px) 268px, 388px" width="340" height="425" alt="Yvonne Padilla smiling, in a portrait outdoors" fetchpriority="high" />
+            <img src="images/yvonne-hero-340.webp" srcset="images/yvonne-hero-340.webp 340w, images/yvonne-hero-480.webp 480w, images/yvonne-hero-680.webp 680w" sizes="(max-width: 640px) 268px, 388px" width="340" height="425" alt="Yvonne Padilla smiling, in a portrait outdoors" fetchpriority="high" />
             <figcaption>Yvonne &middot; Colorado Springs</figcaption>
           </figure>
           <div class="tape" aria-hidden="true"></div>
@@ -419,7 +419,7 @@
 
         <figure class="plate">
           <div class="plate-frame">
-            <img src="images/roots-framework-1200.webp" srcset="images/roots-framework-1200.webp 1200w, images/roots-framework-1672.webp 1672w" sizes="(max-width: 1280px) 92vw, 1164px" width="1200" height="675" loading="lazy" decoding="async" alt="The ROOTS framework drawn as a tree labeled Your organization, with five connected roots: Relationships, how people connect; Ownership, who decides; Operations, how work gets done; Talent, how people grow and stay; Strategy, where you're headed. Fine root hairs cross between all five. Everything is connected." />
+            <img src="images/roots-framework-1200.webp" srcset="images/roots-framework-640.webp 640w, images/roots-framework-860.webp 860w, images/roots-framework-1200.webp 1200w, images/roots-framework-1672.webp 1672w" sizes="(max-width: 1280px) calc(100vw - 56px), 1164px" width="1200" height="675" loading="lazy" decoding="async" alt="The ROOTS framework drawn as a tree labeled Your organization, with five connected roots: Relationships, how people connect; Ownership, who decides; Operations, how work gets done; Talent, how people grow and stay; Strategy, where you're headed. Fine root hairs cross between all five. Everything is connected." />
           </div>
           <figcaption class="plate-key" aria-hidden="true">
             <ul>
@@ -479,7 +479,7 @@
     <section class="section" id="results" aria-labelledby="results-title">
       <div class="wrap">
         <p class="label">in their words</p>
-        <h2 class="h2" id="results-title">From the leaders I&rsquo;ve worked with</h2>
+        <h2 class="h2" id="results-title">From the leaders I&rsquo;ve worked with.</h2>
         <div class="quotes">
           <figure class="quote">
             <blockquote><p>&ldquo;I&rsquo;d recommend her to any owner who knows something is wrong but can&rsquo;t see what.&rdquo;</p></blockquote>
@@ -534,7 +534,7 @@
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="wrap">
         <p class="label">before you call</p>
-        <h2 class="h2" id="faq-title">Questions people ask</h2>
+        <h2 class="h2" id="faq-title">Questions people ask.</h2>
         <div class="faq-list">
           <details>
             <summary>What happens after the assessment?</summary>
@@ -693,7 +693,8 @@
         }).catch(function (err) {
           status.className = 'form-status error';
           status.textContent = 'Something went wrong and your message didn’t send. ' +
-            (err && err.message ? err.message.replace(/[.!?]?\s*$/, '. ') : '') + 'Please try again, or email ';
+            (err && err.name === 'TypeError' ? 'Your connection may have dropped. ' :
+              (err && err.message ? err.message.replace(/[.!?]?\s*$/, '. ') : '')) + 'Please try again, or email ';
           var link = document.createElement('a');
           link.href = 'mailto:hello@yvonnepadilla.com';
           link.textContent = 'hello@yvonnepadilla.com';
