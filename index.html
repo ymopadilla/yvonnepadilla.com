@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ── SEO: Core ── -->
   <title>Yvonne Padilla | Leadership Consultant &amp; Organizational Strategist</title>
-  <meta name="description" content="I help founders and leaders of growing organizations uncover what's not working, then make strategic, data-informed changes together with their teams. Based in Colorado Springs." />
+  <meta name="description" content="I help founders and leaders of growing organizations uncover what's not working, then make strategic, data-informed changes together with their teams." />
   <meta name="author" content="Yvonne Padilla" />
   <link rel="canonical" href="https://yvonnepadilla.com/" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#24212E" />
 
-  <!-- ── SEO: Open Graph ── -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yvonnepadilla.com/" />
   <meta property="og:title" content="Yvonne Padilla | Something's not working. Let's name it." />
@@ -22,13 +20,10 @@
   <meta property="og:image:alt" content="Polaroid photo of Yvonne Padilla beside the headline Something's not working. Let's name it., with her YP logo and name" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Yvonne Padilla" />
-
-  <!-- ── SEO: Twitter/X Card ── -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Yvonne Padilla | Something's not working. Let's name it." />
   <meta name="twitter:description" content="I help founders and leaders of growing organizations uncover what's not working, then make strategic, data-informed changes together with their teams." />
   <meta name="twitter:image" content="https://yvonnepadilla.com/og-image-v4.jpg" />
-
   <!-- ── SEO: Schema.org ── -->
   <script type="application/ld+json">
   {
@@ -89,7 +84,6 @@
     ]
   }
   </script>
-
   <!-- ── Favicon ── -->
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
@@ -99,271 +93,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Caveat:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
-
-    :root {
-      --white: #FFFFFF;
-      --lav: #F7F5FA;
-      --violet: #6B44D4;
-      --violet-deep: #4A2A9E;
-      --violet-ink: #2E1A66;
-      --teal: #4FA89B;
-      --coral: #E2603D;
-      --coral-ink: #B84A2B;
-      --ink: #24212E;
-      --body: #565062;
-      --muted: #625D70;
-      --line: #E2DEEB;
-      --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
-      --sans: 'Atkinson Hyperlegible Next', 'Segoe UI', system-ui, -apple-system, sans-serif;
-      --hand: 'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
-      --wrap: 1280px;
-      --pad: clamp(20px, 4vw, 40px);
-    }
-
-    body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--sans); font-size: 18px; line-height: 1.65; }
-    img { max-width: 100%; height: auto; display: block; }
-    p, h1, h2, h3, figure, blockquote, ul { margin: 0; }
-    a { color: var(--violet-deep); text-underline-offset: 3px; }
-    a:hover { color: var(--violet-ink); }
-    :focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
-    [id] { scroll-margin-top: 24px; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-
-    .skip-link { position: absolute; left: 16px; top: -100px; z-index: 100; background: var(--ink); color: var(--white); padding: 12px 18px; font-weight: 700; text-decoration: none; }
-    .skip-link:focus { top: 16px; color: var(--white); }
-
-    .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
-
-    /* Handwritten editor notes */
-    .note { font-family: var(--hand); font-weight: 500; color: var(--coral-ink); line-height: 1.15; }
-    .label { font-family: var(--hand); font-weight: 500; font-size: 30px; line-height: 1.1; color: var(--coral-ink); transform: rotate(-1.5deg); transform-origin: left center; margin-bottom: 16px; }
-    .on-dark .label { color: #FFB79E; }
-
-    /* Buttons */
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 28px; font-family: var(--sans); font-weight: 700; font-size: 17px; line-height: 1.2; text-decoration: none; border: 1.5px solid var(--ink); transition: background-color .15s ease, color .15s ease; }
-    .btn svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
-    .btn-dark { background: var(--ink); color: var(--white); }
-    .btn-dark:hover { background: var(--violet-deep); border-color: var(--violet-deep); color: var(--white); }
-    .btn-outline { background: transparent; color: var(--ink); }
-    .btn-outline:hover { background: var(--ink); color: var(--white); }
-    .btn-violet { background: var(--violet-deep); border-color: var(--violet-deep); color: var(--white); }
-    .btn-violet:hover { background: var(--violet-ink); border-color: var(--violet-ink); color: var(--white); }
-    .btn-light { background: var(--white); border-color: var(--white); color: var(--ink); }
-    .btn-light:hover { background: var(--lav); color: var(--ink); }
-    .actions { display: flex; flex-wrap: wrap; gap: 16px; }
-
-    /* Header */
-    .site-header { border-bottom: 1px solid var(--ink); }
-    .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; padding-top: 20px; padding-bottom: 20px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink); text-decoration: none; }
-    .brand img { width: 34px; height: 34px; }
-    .brand span { font-family: var(--serif); font-size: 22px; font-weight: 600; }
-    .brand:hover { color: var(--ink); }
-    .nav { display: flex; align-items: center; gap: 4px 26px; flex-wrap: wrap; list-style: none; padding: 0; font-size: 15px; }
-    .nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; }
-    .nav a:hover { text-decoration: underline; color: var(--ink); }
-    .site-header nav { margin-left: auto; }
-    .nav-call { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; background: var(--ink); color: var(--white); font-size: 15px; font-weight: 700; text-decoration: none; }
-    .nav-call:hover { background: var(--violet-deep); color: var(--white); }
-    .nav-call svg { width: 16px; height: 16px; fill: currentColor; }
-
-    /* Hero */
-    .hero .wrap { display: flex; flex-wrap: wrap; gap: 64px 72px; align-items: center; padding-top: clamp(48px, 8vw, 88px); padding-bottom: clamp(56px, 8vw, 96px); }
-    .hero-text { flex: 999 1 540px; min-width: 0; }
-    .kicker { font-size: 14px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--violet-deep); margin-bottom: 24px; }
-    .hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(46px, 8vw, 116px); line-height: .96; letter-spacing: -.035em; }
-    .hero h1 em { font-weight: 400; color: var(--violet-deep); }
-    .hero-tagline { margin-top: 32px; max-width: 590px; font-size: 20px; line-height: 1.6; color: var(--body); }
-    .hero .actions { margin-top: 36px; }
-    .polaroid-wrap { flex: 1 1 300px; max-width: 420px; margin: 0 auto; position: relative; }
-    .polaroid { background: var(--white); padding: 16px 16px 14px; box-shadow: 0 18px 40px rgba(36,33,46,.16); transform: rotate(2.5deg); }
-    .polaroid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
-    .polaroid figcaption { margin-top: 12px; text-align: center; font-family: var(--hand); font-weight: 500; font-size: 28px; line-height: 1.2; color: var(--ink); }
-    .tape { position: absolute; top: -14px; width: 120px; height: 32px; background: rgba(226,96,61,.38); transform: rotate(-4deg); pointer-events: none; }
-    .hero .tape { left: 50%; margin-left: -60px; }
-    .hero-note { display: none; position: absolute; left: -168px; bottom: 120px; width: 160px; font-size: 25px; transform: rotate(-6deg); }
-    @media (min-width: 1320px) { .hero-note { display: block; } }
-    .nw { white-space: nowrap; }
-
-    .stripe { height: 4px; background: linear-gradient(90deg, var(--violet) 0%, var(--violet-deep) 45%, var(--teal) 78%, var(--coral) 100%); }
-    .stats { border-bottom: 1px solid var(--ink); }
-    .stats ul { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 48px; padding-top: 18px; padding-bottom: 18px; font-size: 15px; color: var(--body); }
-    .stats strong { font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--ink); }
-
-    /* Section rhythm */
-    .section { padding-top: clamp(72px, 10vw, 112px); padding-bottom: clamp(72px, 10vw, 112px); }
-    .tint { background: var(--lav); }
-    .h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -.02em; max-width: 860px; }
-    .lead { font-size: 20px; color: var(--body); max-width: 680px; }
-
-    /* Symptoms */
-    .symptoms-head { font-family: var(--serif); font-weight: 700; font-size: clamp(34px, 5.2vw, 76px); line-height: 1.1; letter-spacing: -.025em; }
-    .underline { position: relative; display: inline-block; }
-    .underline svg { position: absolute; left: 0; bottom: -10px; width: 100%; height: 16px; overflow: visible; }
-    .symptoms-foot { margin-top: 48px; display: flex; flex-wrap: wrap; gap: 20px 56px; align-items: flex-start; }
-    .symptoms-foot .lead { flex: 2 1 480px; }
-    .symptoms-note { flex: 1 1 240px; font-size: 28px; transform: rotate(-2deg); }
-    .arrow-up { display: none; }
-    @media (max-width: 860px) { .arrow-left { display: none; } .arrow-up { display: inline; } }
-
-    /* ROOTS */
-    .roots { background: var(--ink); color: var(--white); }
-    .roots-top { display: flex; flex-wrap: wrap; gap: 28px 64px; align-items: flex-end; margin-bottom: clamp(48px, 7vw, 72px); }
-    .roots-top > div { flex: 2 1 540px; }
-    .roots .h2 em { font-weight: 400; color: #C9B8FF; }
-    .roots-intro { flex: 1 1 300px; color: #DDD6E8; }
-    .plate { position: relative; }
-    .plate-frame { background: var(--white); padding: clamp(8px, 1.6vw, 18px); box-shadow: 0 24px 50px rgba(0,0,0,.35); }
-    .plate .tape { background: rgba(226,96,61,.5); width: clamp(72px, 10vw, 130px); }
-    .plate .tape-l { left: 8%; }
-    .plate .tape-r { right: 8%; transform: rotate(3deg); }
-    .plate-key { display: none; }
-    @media (max-width: 760px) {
-      .plate-key { display: block; margin-top: 28px; }
-      .plate-key ul { list-style: none; padding: 0; }
-      .plate-key li { padding: 10px 0; border-top: 1px solid #4A4458; color: #DDD6E8; font-size: 17px; }
-      .plate-key strong { display: block; font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--white); }
-    }
-    .roots-scope { margin-top: clamp(48px, 7vw, 80px); padding-top: 40px; border-top: 1px solid #4A4458; display: flex; flex-wrap: wrap; gap: 28px 56px; align-items: center; justify-content: space-between; }
-    .roots-scope p { flex: 1 1 520px; max-width: 820px; color: #DDD6E8; }
-    .roots-scope strong { color: var(--white); }
-
-    /* Method */
-    .steps { display: flex; flex-wrap: wrap; gap: 40px 48px; margin-top: 56px; }
-    .step { flex: 1 1 280px; border-top: 3px solid var(--ink); padding-top: 24px; }
-    .step h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 44px; line-height: 1; margin-bottom: 14px; }
-    .step p { color: var(--body); }
-
-    /* Working together */
-    .services { display: flex; flex-wrap: wrap; gap: 0 64px; margin-top: 40px; }
-    .service { flex: 1 1 520px; display: flex; gap: 8px 24px; padding: 28px 0; border-top: 1px solid #D6D0E0; }
-    .service h3 { flex: 0 0 220px; font-family: var(--serif); font-size: 24px; font-weight: 600; line-height: 1.25; }
-    .service p { color: var(--body); }
-    .fine { margin-top: 24px; font-size: 16px; color: var(--muted); }
-    @media (max-width: 640px) { .service { flex-direction: column; } .service h3 { flex: none; } }
-
-    /* Testimonials */
-    .quotes { display: flex; flex-wrap: wrap; gap: 48px; margin-top: 40px; }
-    .quote { flex: 1 1 440px; border-top: 3px solid var(--ink); padding-top: 28px; }
-    .quote blockquote p { font-family: var(--serif); font-size: clamp(26px, 2.6vw, 32px); line-height: 1.25; }
-    .quote-stats { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 14px 36px; }
-    .quote-stats li { flex: 1 1 180px; font-size: 15px; line-height: 1.4; color: var(--body); }
-    .quote-stats strong { display: block; font-family: var(--serif); font-size: 34px; font-weight: 600; line-height: 1.1; color: var(--violet-deep); }
-    .quote figcaption { margin-top: 20px; font-size: 16px; color: var(--muted); }
-    .quote figcaption strong { color: var(--ink); }
-    .quote details { margin-top: 18px; }
-    .quote summary { display: inline-flex; align-items: center; min-height: 44px; cursor: pointer; font-weight: 700; color: var(--violet-deep); list-style: none; }
-    .quote summary::-webkit-details-marker { display: none; }
-    .quote summary::after { content: "+"; margin-left: 8px; font-size: 20px; }
-    .quote details[open] summary::after { content: "–"; }
-    .quote .less, .quote details[open] .more { display: none; }
-    .quote details[open] .less { display: inline; }
-    .quote .full { margin-top: 12px; color: var(--body); font-size: 17px; }
-    .quote .full p + p { margin-top: 14px; }
-
-    /* About */
-    .about .wrap { display: flex; flex-wrap: wrap; gap: 56px 64px; align-items: center; }
-    .about-photo { flex: 1 1 280px; max-width: 360px; margin: 0 auto; position: relative; }
-    .about-photo .polaroid { padding: 14px 14px 44px; transform: rotate(-2deg); box-shadow: 0 14px 32px rgba(36,33,46,.14); }
-    .about-text { flex: 2 1 460px; }
-    .about-text .h2 { margin-bottom: 24px; }
-    .about-text p.body { color: var(--body); max-width: 680px; }
-    .about-text p.body + p.body { margin-top: 18px; }
-    .sign { margin-top: 24px; display: flex; align-items: center; gap: 12px 28px; flex-wrap: wrap; }
-    .sign img { width: 200px; }
-    .sign .note { font-size: 26px; transform: rotate(-3deg); }
-
-    /* FAQ */
-    .faq-list { margin-top: 40px; max-width: 900px; border-bottom: 1px solid var(--line); }
-    .faq-list details { border-top: 1px solid var(--line); }
-    .faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 14px 0; cursor: pointer; font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.3; list-style: none; }
-    .faq-list summary::-webkit-details-marker { display: none; }
-    .faq-list summary::after { content: "+"; flex: none; font-family: var(--sans); font-weight: 400; font-size: 28px; color: var(--violet-deep); }
-    .faq-list details[open] summary::after { content: "–"; }
-    .faq-list details p { padding: 0 0 22px; max-width: 760px; color: var(--body); }
-    .faq-more { margin-top: 28px; color: var(--body); }
-
-    /* Contact */
-    .contact { border-top: 1px solid var(--ink); }
-    .contact .wrap { display: flex; flex-wrap: wrap; gap: 48px 72px; align-items: flex-start; }
-    .contact-intro { flex: 1 1 380px; }
-    .contact-intro h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(40px, 5vw, 72px); line-height: 1; letter-spacing: -.03em; }
-    .contact-intro .lead { margin-top: 28px; }
-    .contact-intro .actions { margin-top: 32px; }
-    .contact-form-wrap { flex: 1 1 480px; min-width: 0; }
-    .form-note { font-size: 15px; color: var(--muted); margin-bottom: 14px; }
-    .req { color: var(--coral-ink); font-weight: 700; }
-    .form-row { display: flex; flex-wrap: wrap; gap: 0 20px; }
-    .form-row .field { flex: 1 1 220px; }
-    .field { margin-bottom: 20px; }
-    .field label { display: block; margin-bottom: 6px; font-size: 16px; font-weight: 700; }
-    .field input, .field select, .field textarea { width: 100%; min-height: 52px; padding: 12px 14px; font: inherit; font-size: 17px; color: var(--ink); background: var(--white); border: 1.5px solid #8C8699; border-radius: 0; }
-    .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 22px) 50%, calc(100% - 16px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 44px; }
-    .field textarea { min-height: 150px; resize: vertical; }
-    .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; border-color: var(--violet-deep); }
-    .field input:user-invalid, .field textarea:user-invalid { border-color: var(--coral-ink); }
-    .field-error { margin-top: 6px; font-size: 15px; font-weight: 700; color: #A3361A; }
-    .field-error::before { content: "! "; }
-    .field [aria-invalid="true"] { border-color: #A3361A; border-width: 2px; }
-    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-    .form-submit { width: 100%; cursor: pointer; }
-    .form-submit:disabled { opacity: .7; cursor: wait; }
-    .form-status { margin-top: 14px; font-size: 16px; }
-    .form-status.error { color: #A3361A; font-weight: 700; }
-    .thanks { padding: 32px; background: var(--lav); border-top: 3px solid var(--ink); }
-    .thanks h3 { font-family: var(--serif); font-size: 30px; font-weight: 600; margin-bottom: 10px; }
-    .thanks:focus { outline: 3px solid var(--violet); outline-offset: 3px; }
-    .privacy-note { margin-top: 18px; font-size: 15px; color: var(--muted); }
-
-    /* Footer */
-    .site-footer { border-top: 1px solid var(--ink); font-size: 15px; color: var(--muted); }
-    .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center; padding-top: 28px; padding-bottom: 28px; }
-    .site-footer ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0 22px; }
-    .site-footer a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); }
-    .footer-credit a { gap: 10px; text-decoration: none; color: var(--muted); }
-    .footer-credit img { width: 143px; height: 20px; }
-    .footer-credit .badge { display: inline-flex; align-items: center; padding: 6px 10px; background: var(--ink); }
-
-    @media (max-width: 640px) {
-      body { font-size: 17px; }
-      .site-header .wrap { padding-top: 14px; padding-bottom: 10px; }
-      .site-header nav { order: 3; width: 100%; margin-left: 0; }
-      .nav { gap: 0 20px; }
-      .hero-tagline, .lead { font-size: 18px; }
-      .polaroid-wrap { max-width: 300px; }
-      .btn { width: 100%; }
-      .step h3 { font-size: 38px; }
-      .faq-list summary { font-size: 20px; }
-    }
-    @media (max-width: 380px) {
-      .nav { gap: 0 14px; font-size: 14px; }
-      .nav-call { padding: 0 14px; }
-      .brand { gap: 8px; }
-      .brand img { width: 28px; height: 28px; }
-      .brand span { font-size: 19px; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/site.css" />
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
-
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="#top" aria-label="Yvonne Padilla, back to top">
+      <a class="brand" href="index.html" aria-label="Yvonne Padilla, home">
         <img src="images/yp-mark-68.png" alt="" width="34" height="34" />
         <span>Yvonne Padilla</span>
       </a>
       <nav aria-label="Main">
         <ul class="nav">
-          <li><a href="#roots">ROOTS Assessment</a></li>
-          <li><a href="#method">How I work</a></li>
-          <li><a href="#about">About</a></li>
-          </ul>
+          <li><a href="roots-assessment.html">ROOTS Assessment</a></li>
+          <li><a href="working-together.html">Working together</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
       <a class="nav-call" href="tel:+17193188200"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call<span class="sr-only"> 719-318-8200</span></a>
     </div>
@@ -378,7 +124,7 @@
           <h1 id="hero-title">Something&rsquo;s not working. <em>Let&rsquo;s <span class="nw">name it.</span></em></h1>
           <p class="hero-tagline">I help founders and leaders of growing organizations uncover what&rsquo;s not working and why. Then we use what we learn to make purposeful, data-informed changes together.</p>
           <div class="actions">
-            <a class="btn btn-dark" href="#contact">Start a conversation</a>
+            <a class="btn btn-dark" href="contact.html">Start a conversation</a>
             <a class="btn btn-outline" href="tel:+17193188200"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call 719-318-8200</a>
           </div>
         </div>
@@ -413,72 +159,22 @@
       </div>
     </section>
 
-    <section class="roots on-dark" id="roots" aria-labelledby="roots-title">
+    <section class="roots on-dark roots-preview" id="roots" aria-labelledby="roots-title">
       <div class="wrap section">
-        <div class="roots-top">
+        <div class="roots-top" style="margin-bottom:0">
           <div>
             <p class="label">the ROOTS Assessment</p>
             <h2 class="h2" id="roots-title">Everything in your organization is connected. <em>So is the way I look at it.</em></h2>
           </div>
           <p class="roots-intro">Organizations are dynamic. A hiring problem often starts with leadership; a culture problem often starts in a system. ROOTS looks at five connected areas, on purpose, so we fix causes instead of chasing symptoms.</p>
         </div>
-
-        <figure class="plate">
-          <div class="plate-frame">
-            <img src="images/roots-framework-1200.webp" srcset="images/roots-framework-640.webp 640w, images/roots-framework-860.webp 860w, images/roots-framework-1200.webp 1200w, images/roots-framework-1672.webp 1672w" sizes="(max-width: 1280px) calc(100vw - 56px), 1164px" width="1200" height="675" loading="lazy" decoding="async" alt="The ROOTS framework drawn as a tree labeled Your organization, with five connected roots: Relationships, how people connect; Ownership, who decides; Operations, how work gets done; Talent, how people grow and stay; Strategy, where you're headed. Fine root hairs cross between all five. Everything is connected." />
-          </div>
-          <figcaption class="plate-key" aria-hidden="true">
-            <ul>
-              <li><strong>Relationships</strong> how people connect</li>
-              <li><strong>Ownership</strong> who decides</li>
-              <li><strong>Operations</strong> how work gets done</li>
-              <li><strong>Talent</strong> how people grow and stay</li>
-              <li><strong>Strategy</strong> where you&rsquo;re headed</li>
-            </ul>
-          </figcaption>
-          <div class="tape tape-l" aria-hidden="true"></div>
-          <div class="tape tape-r" aria-hidden="true"></div>
-        </figure>
-
         <div class="roots-scope">
-          <p>In three to four weeks, I talk with your people, look at how the work gets done, and show you how the five connect in your organization. You get a written report, a 90-day plan, a debrief, and a 30-day check-in. Starting at <strong>$3,500</strong>, fixed fee.</p>
-          <a class="btn btn-light" href="#contact">Ask about the assessment</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="method" aria-labelledby="method-title">
-      <div class="wrap">
-        <p class="label">how I work</p>
-        <h2 class="h2" id="method-title">Diagnosis before solutions. Every step on purpose.</h2>
-        <div class="steps">
-          <div class="step">
-            <h3>Listen</h3>
-            <p>I spend the first weeks with your people and your calendar before I recommend anything. Years of leading a school taught me which questions get real answers instead of polite ones.</p>
-          </div>
-          <div class="step">
-            <h3>Connect</h3>
-            <p>I trace the turnover or the bottleneck back to what&rsquo;s producing it and show you how the pieces connect. Then I tell you plainly what I find.</p>
-          </div>
-          <div class="step">
-            <h3>Build together</h3>
-            <p>Guided by data results, we work on solutions aligning with your goals, each one chosen on purpose, each phase clearly scoped.</p>
+          <p>Three to four weeks. A written report, a 90-day plan, a debrief, and a 30-day check-in. Starting at <strong>$3,500</strong>, fixed fee.</p>
+          <div class="actions">
+            <a class="btn btn-light" href="roots-assessment.html">See how ROOTS works</a>
+            <a class="btn btn-outline-light" href="contact.html">Start a conversation</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section tint" id="services" aria-labelledby="services-title">
-      <div class="wrap">
-        <p class="label">working together</p>
-        <h2 class="h2" id="services-title">After the assessment, you decide what&rsquo;s next.</h2>
-        <div class="services">
-          <div class="service"><h3>Change management</h3><p>Most people resist change, even good change. I understand the psychology of resistance and help leaders bring their teams along with clear reasons, early wins, and steady communication, so new ways of working stick.</p></div>
-          <div class="service"><h3>Coaching &amp; team development</h3><p>For you and your leadership team, so decisions stop routing through one person and your bench gets deeper.</p></div>
-          <div class="service"><h3>Implementation</h3><p>Building the systems and workflows the assessment calls for, including new tools and technology where they help, side by side with your team.</p></div>
-          <div class="service"><h3>Ongoing advisory</h3><p>A steady outside partner for organizations wanting one, with scope and length set together after the assessment.</p></div>
-        </div>
-        <p class="fine">Anything after the assessment is quoted separately.</p>
       </div>
     </section>
 
@@ -494,164 +190,42 @@
               <li><strong>+6 points</strong> profit margin, even after paying for a consultant</li>
             </ul>
             <figcaption><strong>Amanda Bench</strong>, Owner, <a href="https://www.coloradohomeschooling.com/" target="_blank" rel="noopener">Colorado Homeschooling<span class="sr-only"> (opens in a new tab)</span></a></figcaption>
-            <details>
-              <summary><span class="more">Read Amanda&rsquo;s full story</span><span class="less">Show less</span></summary>
-              <div class="full">
-                <p>When I brought my business to Yvonne, I knew something was wrong, but I couldn't name what it was. I was tired, doing 100% of the service delivery and admin myself, and I was seriously considering selling. What Yvonne did wasn't just listen — she listened through the noise to figure out what I was actually saying, even when I couldn't articulate it myself. She identified that the real problem was structural: my internal process wasn't sustainable, and no amount of effort was going to fix that without changing the process itself. That was the piece I couldn't see on my own.</p>
-                <p>She refused to let me throw the business away. Instead, she rebuilt the systems underneath it — first creating infrastructure that let the business run across multiple users, then redesigning the evaluation process itself to be dramatically more efficient. In 2026 alone, that shift cut evaluation time by more than half. We also restructured how services were priced, which strengthened the business's margins.</p>
-                <p>Six months after we started, I went from 'considering an exit' to confident the business actually works — and works without me having to do everything myself. Yvonne has this rare mix of being able to figure out what people are saying when they don't even know what they're saying themselves, while also building the practical systems to fix it. She doesn't just make a business more efficient — she makes it scalable. I'd recommend her to any owner who knows something is wrong but can't see what.</p>
-              </div>
-            </details>
           </figure>
           <figure class="quote">
             <blockquote><p>&ldquo;Yvonne asked questions nobody had asked us.&rdquo;</p></blockquote>
             <figcaption><strong>Akai and Angel Clifford</strong>, Owners, Elevation Sports (an NZone Sports franchise)</figcaption>
-            <details>
-              <summary><span class="more">Read the Cliffords&rsquo; full story</span><span class="less">Show less</span></summary>
-              <div class="full">
-                <p>When we first started talking with Yvonne about NZone Sports, we had a vision and training, but we were still looking for the right opportunity to put it all into action. We owned a franchise, but we didn&rsquo;t have a clear focus or path.</p>
-                <p>Yvonne asked questions nobody had asked us. She found a need for what we offered in home schools before we even knew there was one. As a school leader, she saw what her students were missing, and she brought us in to run an after-school sports program for them. She truly believed her students deserved a physical fitness program. It was the first home school program we ever had. Partnering with home schools had never come up anywhere in our franchise, and it was a refreshing idea.</p>
-                <p>She did more than bring us in. She brought the program to us. Every time we hit a problem, she had a solution, and she helped us keep it from happening again. Over two years, the partnership gave us revenue, but more importantly, it gave us a baseline. Yvonne&rsquo;s honest feedback showed us what we were missing: how to group kids by age, how many coaches each group needs, and what has to be in place before we launch. Her feedback became our roadmap, and we&rsquo;re using it now as we plan what&rsquo;s next.</p>
-                <p>More than anything, Yvonne helped us see what NZone could be: a specialized home school program, something the franchise&rsquo;s curriculum didn&rsquo;t offer at the time. She&rsquo;s a problem solver with great ideas. She&rsquo;s a good listener, she&rsquo;s open to feedback, and she is patient in the problem-solving process. She told us our shortfalls, and that&rsquo;s exactly what we needed.</p>
-                <p>Anyone who works with Yvonne is going to get more than they expect.</p>
-              </div>
-            </details>
           </figure>
         </div>
+        <a class="more-link" href="about.html#results">Read their full stories &rarr;</a>
       </div>
     </section>
 
-    <section class="section tint about" id="about" aria-labelledby="about-title">
+    <section class="section cta-band on-dark" aria-labelledby="cta-title">
       <div class="wrap">
-        <div class="about-photo">
-          <figure class="polaroid">
-            <img src="images/yvonne-about-denim-260.webp" srcset="images/yvonne-about-denim-260.webp 260w, images/yvonne-about-denim-520.webp 520w" sizes="(max-width: 640px) 80vw, 332px" width="260" height="325" alt="Yvonne Padilla in a denim jacket" loading="lazy" decoding="async" />
-          </figure>
+        <div>
+          <h2 id="cta-title">Let&rsquo;s find out what&rsquo;s really going on.</h2>
+          <p>You don&rsquo;t need a diagnosis before you reach out. Diagnosis is my job. Our first conversation is complimentary.</p>
         </div>
-        <div class="about-text">
-          <p class="label">about</p>
-          <h2 class="h2" id="about-title">Hi, I&rsquo;m Yvonne.</h2>
-          <p class="body">I spent twenty-six years leading inside complex organizations, seventeen of them building and leading Thrive Home School Academy as principal. A school is a dynamic, unforgiving training ground: everyone has a legitimate stake, and none of them agree. It taught me how to listen into messy problems and build systems strong enough to grow with an organization.</p>
-          <p class="body">Now I do this work as a consultant, for schools, nonprofits, and growing businesses. I uncover what&rsquo;s not working, then work with you and your team, guided by data results, on solutions aligning with your goals. If something in your organization feels off and you can&rsquo;t quite name it, I&rsquo;d love to talk.</p>
-          <div class="sign">
-            <img src="images/yvonne-signature.webp" width="224" height="114" alt="Signed, Yvonne Padilla" loading="lazy" decoding="async" />
-            <p class="note">yes, I read every message myself</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq" aria-labelledby="faq-title">
-      <div class="wrap">
-        <p class="label">before you call</p>
-        <h2 class="h2" id="faq-title">Questions people ask.</h2>
-        <div class="faq-list">
-          <details>
-            <summary>What happens after the assessment?</summary>
-            <p>You decide. Some leaders take the report and run with it. Others ask me to coach their leadership team or build the systems with them for a set period. There&rsquo;s no obligation to keep going.</p>
-          </details>
-          <details>
-            <summary>Who do you work with?</summary>
-            <p>Founders and leaders of schools, nonprofits, and growing businesses. Most are at a point where what got them here isn&rsquo;t carrying them forward, and they can feel it before they can name it.</p>
-          </details>
-          <details>
-            <summary>What if I don&rsquo;t know what the problem is?</summary>
-            <p>It&rsquo;s the most common way people start. Tell me what you&rsquo;re noticing. Figuring out what&rsquo;s underneath it is the first part of my job.</p>
-          </details>
-          <details>
-            <summary>How does an engagement start?</summary>
-            <p>With a conversation by phone, Zoom, or in person, whichever you prefer. If the assessment is a good fit, I send a short agreement, and we schedule the kickoff.</p>
-          </details>
-          <details>
-            <summary>How much does it cost?</summary>
-            <p>Our first conversation is complimentary, and the assessment starts at $3,500 for small organizations. It&rsquo;s a fixed fee, so you know the full cost before we begin. Anything after the assessment is quoted separately.</p>
-          </details>
-          <details>
-            <summary>How long does it take?</summary>
-            <p>The assessment takes three to four weeks for most small organizations. If we keep working together afterward, we set the length based on what the assessment uncovers, and each phase of work has a clearly defined scope.</p>
-          </details>
-          <details>
-            <summary>Do you work outside Colorado Springs?</summary>
-            <p>Yes. I&rsquo;m based in Colorado Springs and work with organizations across the country, in person or remotely, depending on the needs of your organization and the scope of work required to meet your goals.</p>
-          </details>
-          <details>
-            <summary>What don&rsquo;t you do?</summary>
-            <p>I don&rsquo;t run your programs or your daily operations, and I don&rsquo;t write grants. I work with you and your team to build new systems aligned with your vision and goals.</p>
-          </details>
-          <details>
-            <summary>What happens when you&rsquo;re done?</summary>
-            <p>You keep the systems, and your team knows how to run them. The goal is for you to eventually stop needing me.</p>
-          </details>
-        </div>
-        <p class="faq-more">Have a different question? Call or text <a href="tel:+17193188200">719-318-8200</a>.</p>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="wrap">
-        <div class="contact-intro">
-          <p class="label">get in touch</p>
-          <h2 id="contact-title">Let&rsquo;s find out what&rsquo;s really going on.</h2>
-          <p class="lead">You don&rsquo;t need a diagnosis before you reach out. Diagnosis is my job. Our first conversation is complimentary, and I reply within two business days.</p>
-          <div class="actions">
-            <a class="btn btn-outline" href="tel:+17193188200"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call or text 719-318-8200</a>
-          </div>
-        </div>
-        <div class="contact-form-wrap">
-          <form class="contact-form" id="contact-form" action="https://formspree.io/f/mykqerno" method="POST">
-            <p class="form-note"><span class="req" aria-hidden="true">*</span> Required</p>
-            <div class="form-row">
-              <div class="field">
-                <label for="name">Your name <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
-                <input type="text" id="name" name="name" autocomplete="name" required />
-                <p class="field-error" id="name-error" hidden></p>
-              </div>
-              <div class="field">
-                <label for="email">Email address <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
-                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required />
-                <p class="field-error" id="email-error" hidden></p>
-              </div>
-            </div>
-            <div class="field">
-              <label for="organization">Organization</label>
-              <input type="text" id="organization" name="organization" autocomplete="organization" />
-            </div>
-            <div class="field">
-              <label for="service">Where are you right now?</label>
-              <select id="service" name="service">
-                <option value="" selected>Select one (optional)</option>
-                <option value="Something's off, not sure what">Something&rsquo;s off and I can&rsquo;t name it</option>
-                <option value="ROOTS Assessment">I&rsquo;d like to talk about the ROOTS Assessment</option>
-                <option value="Leadership and culture">Leadership or culture challenges</option>
-                <option value="Change management">Leading a change</option>
-                <option value="Systems, operations, or hiring">Systems, operations, or hiring</option>
-                <option value="General inquiry">Just exploring</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="message">What are you noticing? <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
-              <textarea id="message" name="message" placeholder="It doesn&rsquo;t have to be tidy. Describe what&rsquo;s happening, and I&rsquo;ll take it from there." required></textarea>
-                <p class="field-error" id="message-error" hidden></p>
-            </div>
-            <input type="hidden" name="_subject" value="New inquiry from yvonnepadilla.com" />
-            <div class="hp" aria-hidden="true">
-              <label for="_gotcha">Leave this field empty</label>
-              <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
-            </div>
-            <button type="submit" class="btn btn-violet form-submit">Send message</button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          </form>
-          <div class="thanks" id="form-thanks" tabindex="-1" hidden>
-            <h3>Thank you</h3>
-            <p>I&rsquo;ve got your message and will reply within two business days to find a time to talk.</p>
-          </div>
-          <p class="privacy-note">I use your information only to reply to you, and I never sell it. Site visits are counted anonymously, with no cookies. <a href="privacy.html">How your information is handled</a>.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="contact.html">Start a conversation</a>
+          <a class="btn btn-outline-light" href="tel:+17193188200"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call 719-318-8200</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Footer">
+      <div class="wrap">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="roots-assessment.html">ROOTS Assessment</a></li>
+          <li><a href="working-together.html">Working together</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="wrap">
       <ul>
         <li><a href="mailto:hello@yvonnepadilla.com">hello@yvonnepadilla.com</a></li>
@@ -670,115 +244,6 @@
       <p>&copy; 2026 Yvonne Padilla &middot; Colorado Springs, CO &middot; Serving clients nationally</p>
     </div>
   </footer>
-
-  <script>
-    // Submit the contact form without leaving the page. Falls back to a normal
-    // Formspree post if JavaScript is off.
-    (function () {
-      var form = document.getElementById('contact-form');
-      var status = document.getElementById('form-status');
-      var thanks = document.getElementById('form-thanks');
-      if (!form || !window.fetch) return;
-
-      // Keep a draft of the message in this tab only, so a refresh or an
-      // accidental back-and-forward doesn't erase it. Cleared after sending.
-      var draftKey = 'yp-contact-draft';
-      var draftFields = ['name', 'email', 'organization', 'service', 'message'];
-      try {
-        var saved = JSON.parse(sessionStorage.getItem(draftKey) || '{}');
-        draftFields.forEach(function (id) {
-          var el = document.getElementById(id);
-          if (el && saved[id] && !el.value) el.value = saved[id];
-        });
-        form.addEventListener('input', function () {
-          var data = {};
-          draftFields.forEach(function (id) { var el = document.getElementById(id); if (el) data[id] = el.value; });
-          sessionStorage.setItem(draftKey, JSON.stringify(data));
-        });
-      } catch (e) { /* storage unavailable; the form still works */ }
-
-
-      // Friendlier, persistent error messages (the browser's own checks still
-      // run when JavaScript is off).
-      form.setAttribute('novalidate', '');
-      var messages = {
-        name: 'Please add your name.',
-        email: 'Please add an email address I can reply to, like name@example.com.',
-        message: 'Please tell me a little about what you\u2019re noticing.'
-      };
-      function check(el) {
-        var err = document.getElementById(el.id + '-error');
-        if (!err) return true;
-        var ok = el.checkValidity();
-        if (ok) {
-          el.removeAttribute('aria-invalid');
-          el.removeAttribute('aria-describedby');
-          err.hidden = true;
-          err.textContent = '';
-        } else {
-          el.setAttribute('aria-invalid', 'true');
-          el.setAttribute('aria-describedby', err.id);
-          err.textContent = messages[el.id];
-          err.hidden = false;
-        }
-        return ok;
-      }
-      ['name', 'email', 'message'].forEach(function (id) {
-        var el = document.getElementById(id);
-        el.addEventListener('blur', function () { if (el.value || el.hasAttribute('aria-invalid')) check(el); });
-        el.addEventListener('input', function () { if (el.hasAttribute('aria-invalid')) check(el); });
-      });
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var firstBad = null;
-        ['name', 'email', 'message'].forEach(function (id) {
-          var el = document.getElementById(id);
-          if (!check(el) && !firstBad) firstBad = el;
-        });
-        if (firstBad) {
-          status.className = 'form-status error';
-          status.textContent = 'Please fix the highlighted fields, then send again.';
-          firstBad.focus();
-          return;
-        }
-        var button = form.querySelector('.form-submit');
-        button.disabled = true;
-        button.textContent = 'Sending…';
-        status.className = 'form-status';
-        status.textContent = '';
-
-        fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        }).then(function (res) {
-          if (res.ok) {
-            try { sessionStorage.removeItem(draftKey); } catch (e) {}
-            form.hidden = true;
-            thanks.hidden = false;
-            thanks.focus();
-          } else {
-            return res.json().then(function (data) {
-              var msg = (data && data.errors && data.errors.map(function (x) { return x.message; }).join(' ')) || '';
-              throw new Error(msg);
-            });
-          }
-        }).catch(function (err) {
-          status.className = 'form-status error';
-          status.textContent = 'Something went wrong and your message didn’t send. ' +
-            (err && err.name === 'TypeError' ? 'Your connection may have dropped. ' :
-              (err && err.message ? err.message.replace(/[.!?]?\s*$/, '. ') : '')) + 'Please try again, or email ';
-          var link = document.createElement('a');
-          link.href = 'mailto:hello@yvonnepadilla.com';
-          link.textContent = 'hello@yvonnepadilla.com';
-          status.appendChild(link);
-          status.appendChild(document.createTextNode('.'));
-          button.disabled = false;
-          button.textContent = 'Send message';
-        });
-      });
-    })();
-  </script>
 
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "711c5b0e4eae44b2bc8e6b0b80d42266"}'></script><!-- End Cloudflare Web Analytics -->
 
