@@ -75,11 +75,12 @@
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Working together",
+          "name": "How we work together",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Monthly retainer" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systems & hiring audits" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leadership development" } }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leadership Capacity & Organizational Effectiveness Assessment", "description": "A three- to four-week assessment with confidential interviews, a written findings report, a 90-day plan, and a debrief." }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 3500, "priceCurrency": "USD" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leadership coaching and team development" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Implementation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ongoing advisory" } }
           ]
         },
         "sameAs": ["https://www.linkedin.com/in/yvonnepadilla"]
@@ -658,9 +659,59 @@
       html { scroll-behavior: auto; }
       .hero-cta, .form-submit { transition: none; }
     }
+
+    /* ── AUDIT FIXES (Nov 13, 2026) ── */
+    html { scroll-padding-top: 84px; }
+    .form-group input, .form-group select, .form-group textarea { scroll-margin-top: 110px; }
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 1000; background: var(--white); color: var(--violet-deep); font-weight: 700; padding: 0.75rem 1rem; border-radius: 8px; }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+    main:focus { outline: none; }
+    /* Type scale: H1 clearly dominant (52px vs 36px section titles) */
+    .hero-lede { font-size: clamp(2.1rem, 4.2vw, 3.25rem); }
+    .section-title { font-size: clamp(1.7rem, 3.2vw, 2.25rem); }
+    /* Readable small text */
+    .hero-role { font-size: 0.8rem; }
+    .section-eyebrow { font-size: 0.78rem; }
+    .t-role, .t-stat { font-size: 0.875rem; }
+    .credit { font-size: 0.82rem; }
+    .footer-other, .footer-links a { font-size: 0.875rem; }
+    .footer-sub { font-size: 0.8rem; }
+    /* Services: featured assessment */
+    .eng-start { display: block; font-family: var(--body-font, 'Atkinson Hyperlegible Next', sans-serif); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--violet); margin-bottom: 0.35rem; }
+    .eng-card .eng-price { margin-top: 0.75rem; font-weight: 700; color: var(--violet-deep); }
+    .eng-note { max-width: 880px; margin: 1.5rem auto 0; font-size: 0.95rem; color: var(--muted); }
+    /* Tap targets: 44px minimum */
+    .hero-call { display: inline-flex; align-items: center; min-height: 44px; border-bottom: 0; text-decoration: underline; text-decoration-thickness: 1.5px; text-decoration-color: rgba(74,42,158,0.35); text-underline-offset: 5px; }
+    .hero-call:hover { text-decoration-color: var(--violet-deep); }
+    .contact-call a, .faq-more a { display: inline-flex; align-items: center; min-height: 44px; }
+    .t-full summary { padding-block: 0.85rem; }
+    .nav-links a { display: inline-flex; align-items: center; min-height: 44px; }
+    .nav > a:first-child { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+    .form-group input, .form-group select { min-height: 44px; }
+    .t-role a { padding-block: 0.85rem; }
+    /* Corner radii: 8px for every control and card; photos keep their framed pair */
+    .symptom, .testimonial, .thanks, .credit, .form-group input, .form-group select, .form-group textarea { border-radius: 8px; }
+    /* One brand focus style */
+    a:focus-visible, button:focus-visible, summary:focus-visible, .t-full summary:focus-visible, .faq-list summary:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; border-radius: 4px; }
+    footer a:focus-visible { outline-color: #ffffff; }
+    .form-group input:focus-visible, .form-group select:focus-visible, .form-group textarea:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; }
+    @media (max-width: 560px) {
+      .nav-links a { font-size: 0.75rem; display: inline-flex; align-items: center; min-height: 44px; padding: 0; }
+      .hero-role { font-size: 0.75rem; letter-spacing: 0.1em; }
+    }
+    @media (max-width: 400px) {
+      .nav .nav-links { gap: 0.7rem; }
+      .nav-logo { width: 28px; height: 28px; }
+      .nav { padding: 0.5rem 0.75rem; }
+      .nav-links a { font-size: 0.75rem; letter-spacing: 0.02em; }
+    }
+    @media (max-width: 380px) {
+      .hero-photo-wrap { width: 132px; }
+    }
   </style>
 </head>
 <body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- ── NAV ── -->
   <nav class="nav" aria-label="Main navigation">
@@ -696,7 +747,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="hero-cta" href="#contact">Start a Conversation</a>
+            <a class="hero-cta" href="#contact">Start a conversation</a>
             <a class="hero-call" href="tel:+17193188200">or call 719-318-8200</a>
           </div>
           <figure class="hero-proof">
@@ -721,7 +772,7 @@
 
   <div class="color-bar"></div>
 
-  <main>
+  <main id="main" tabindex="-1">
 
     <!-- ── SYMPTOMS ── -->
     <section class="symptoms" id="symptoms" aria-label="What this usually sounds like">
@@ -789,39 +840,49 @@
     </section>
 
     <!-- ── ENGAGEMENT ── -->
-    <section class="engagement" id="engagement" aria-label="Working together">
+    <section class="engagement" id="engagement" aria-label="How we work together">
       <div class="section-header">
-        <h2 class="section-title">What an engagement looks like</h2>
+        <h2 class="section-title">How we work together</h2>
         <p class="section-sub">
-          Every engagement starts with a diagnostic. From there, we decide together what
-          comes next.
+          Every engagement starts with an assessment. From there, you decide what comes next.
         </p>
       </div>
 
       <div class="eng-grid">
-        <div class="eng-card">
-          <h3 class="eng-name">Monthly retainer</h3>
-          <p>
-            Ongoing support shaped around what your organization needs most. Some months
-            that's strategy with you; some months it's building systems with your team. We set the
-            scope together and adjust it as things change.
-          </p>
+        <div class="eng-card eng-featured">
+          <h3 class="eng-name"><span class="eng-start">Start here</span>Leadership Capacity &amp; Organizational Effectiveness Assessment</h3>
+          <div>
+            <p>
+              In three to four weeks, I talk with your people, look at how the work actually gets
+              done, and tell you plainly what's underneath the problem you called about. You get a
+              written report, a 90-day plan, and a debrief.
+            </p>
+            <p class="eng-price">Starting at $3,500 &middot; fixed fee</p>
+          </div>
         </div>
         <div class="eng-card">
-          <h3 class="eng-name">Systems &amp; hiring audits</h3>
+          <h3 class="eng-name">Leadership coaching &amp; team development</h3>
           <p>
-            An outside look at how work gets done and how you hire, including the things
-            you still do only because nobody stopped.
-          </p>
-        </div>
-        <div class="eng-card">
-          <h3 class="eng-name">Leadership development</h3>
-          <p>
-            Programs designed for your organization, so decisions stop routing through
+            Coaching for you and your leadership team, so decisions stop routing through
             one person and your bench gets deeper.
           </p>
         </div>
+        <div class="eng-card">
+          <h3 class="eng-name">Implementation</h3>
+          <p>
+            Building the systems the assessment calls for, side by side with your team, for a
+            set period with a clear end date.
+          </p>
+        </div>
+        <div class="eng-card">
+          <h3 class="eng-name">Ongoing advisory</h3>
+          <p>
+            A steady outside partner for organizations that want one. We set the scope and length
+            together after the assessment.
+          </p>
+        </div>
       </div>
+      <p class="eng-note">Anything after the assessment is quoted separately, and only if you want it.</p>
     </section>
 
     <!-- ── TESTIMONIALS ── -->
@@ -929,8 +990,8 @@
       </div>
       <div class="faq-list">
         <details>
-          <summary>What does &ldquo;fractional&rdquo; mean?</summary>
-          <p>You get senior leadership experience for part of the month, without hiring a full-time executive. I work alongside you and your team for as long as the work needs me, then hand it off.</p>
+          <summary>What happens after the assessment?</summary>
+          <p>You decide. Some leaders take the report and run with it. Others ask me to coach their leadership team or build the systems with them for a set period. There&rsquo;s no obligation to keep going.</p>
         </details>
         <details>
           <summary>Who do you work with?</summary>
@@ -942,15 +1003,15 @@
         </details>
         <details>
           <summary>How does an engagement start?</summary>
-          <p>With a free first conversation by phone, Zoom, or in person, whichever you prefer. Once we decide to work together, I start with a diagnostic: time with your people and a close look at how the work actually gets done. Depending on the size of your organization, it takes days to weeks, and it&rsquo;s part of the engagement, not an extra cost.</p>
+          <p>With a free conversation by phone, Zoom, or in person, whichever you prefer. If the assessment is a good fit, I send a short agreement, and we schedule the kickoff.</p>
         </details>
         <details>
           <summary>How much does it cost?</summary>
-          <p>Every engagement has a fixed monthly price, set after our first conversation once I understand what you need. You&rsquo;ll know the full cost before you commit to anything, and that first conversation is free.</p>
+          <p>The assessment starts at $3,500 for small organizations. It&rsquo;s a fixed fee, so you know the full cost before we begin. Anything after the assessment is quoted separately, and only if you want it. The first conversation is always free.</p>
         </details>
         <details>
-          <summary>How long does it last?</summary>
-          <p>Anywhere from a few months to a year, depending on how deep the problem goes. Systemic change takes time to land.</p>
+          <summary>How long does it take?</summary>
+          <p>The assessment takes three to four weeks for most small organizations. If we keep working together afterward, we set the length based on what the assessment finds, and every project has an end date.</p>
         </details>
         <details>
           <summary>Do you work outside Colorado Springs?</summary>
@@ -971,12 +1032,12 @@
     <!-- ── SECOND CTA ── -->
     <section class="cta-band" aria-labelledby="cta-band-title">
       <div class="cta-band-inner">
-        <h2 class="section-title" id="cta-band-title">Start with what you're noticing.</h2>
+        <h2 class="section-title" id="cta-band-title">Start with what you're noticing</h2>
         <p class="cta-band-text">
           Tell me what's going on. I'll reach out to set up a time to talk.
         </p>
         <div class="hero-actions cta-actions">
-          <a class="hero-cta" href="#contact">Start a Conversation</a>
+          <a class="hero-cta" href="#contact">Start a conversation</a>
           <a class="hero-call" href="tel:+17193188200">or call 719-318-8200</a>
         </div>
       </div>
@@ -1043,7 +1104,7 @@
           </div>
           <div class="form-group">
             <label for="organization">Organization</label>
-            <input type="text" id="organization" name="organization" placeholder="Where you work" />
+            <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Where you work" />
           </div>
           <div class="form-group">
             <label for="service">Where are you right now?</label>
@@ -1066,11 +1127,11 @@
             <label for="_gotcha">Leave this field empty</label>
             <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
           </div>
-          <button type="submit" class="form-submit">Send Message</button>
+          <button type="submit" class="form-submit">Send message</button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
         <div class="thanks" id="form-thanks" tabindex="-1" hidden>
-          <h3>Thank you.</h3>
+          <h3>Thank you</h3>
           <p>
             I've got your message and will reply within two business days to find a time
             to talk.
@@ -1146,7 +1207,7 @@
           status.appendChild(link);
           status.appendChild(document.createTextNode('.'));
           button.disabled = false;
-          button.textContent = 'Send Message';
+          button.textContent = 'Send message';
         });
       });
     })();
