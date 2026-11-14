@@ -251,6 +251,9 @@
     .quotes { display: flex; flex-wrap: wrap; gap: 48px; margin-top: 40px; }
     .quote { flex: 1 1 440px; border-top: 3px solid var(--ink); padding-top: 28px; }
     .quote blockquote p { font-family: var(--serif); font-size: clamp(26px, 2.6vw, 32px); line-height: 1.25; }
+    .quote-stats { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 14px 36px; }
+    .quote-stats li { flex: 1 1 180px; font-size: 15px; line-height: 1.4; color: var(--body); }
+    .quote-stats strong { display: block; font-family: var(--serif); font-size: 34px; font-weight: 600; line-height: 1.1; color: var(--violet-deep); }
     .quote figcaption { margin-top: 20px; font-size: 16px; color: var(--muted); }
     .quote figcaption strong { color: var(--ink); }
     .quote details { margin-top: 18px; }
@@ -304,6 +307,9 @@
     .field textarea { min-height: 150px; resize: vertical; }
     .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; border-color: var(--violet-deep); }
     .field input:user-invalid, .field textarea:user-invalid { border-color: var(--coral-ink); }
+    .field-error { margin-top: 6px; font-size: 15px; font-weight: 700; color: #A3361A; }
+    .field-error::before { content: "! "; }
+    .field [aria-invalid="true"] { border-color: #A3361A; border-width: 2px; }
     .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
     .form-submit { width: 100%; cursor: pointer; }
     .form-submit:disabled { opacity: .7; cursor: wait; }
@@ -483,6 +489,10 @@
         <div class="quotes">
           <figure class="quote">
             <blockquote><p>&ldquo;I&rsquo;d recommend her to any owner who knows something is wrong but can&rsquo;t see what.&rdquo;</p></blockquote>
+            <ul class="quote-stats" aria-label="Results at Colorado Homeschooling">
+              <li><strong>52.7%</strong> less workload after the redesign</li>
+              <li><strong>+6 points</strong> profit margin, even after paying for a consultant</li>
+            </ul>
             <figcaption><strong>Amanda Bench</strong>, Owner, <a href="https://www.coloradohomeschooling.com/" target="_blank" rel="noopener">Colorado Homeschooling<span class="sr-only"> (opens in a new tab)</span></a></figcaption>
             <details>
               <summary><span class="more">Read Amanda&rsquo;s full story</span><span class="less">Show less</span></summary>
@@ -594,10 +604,12 @@
               <div class="field">
                 <label for="name">Your name <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
                 <input type="text" id="name" name="name" autocomplete="name" required />
+                <p class="field-error" id="name-error" hidden></p>
               </div>
               <div class="field">
                 <label for="email">Email address <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
                 <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required />
+                <p class="field-error" id="email-error" hidden></p>
               </div>
             </div>
             <div class="field">
@@ -619,6 +631,7 @@
             <div class="field">
               <label for="message">What are you noticing? <span class="req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
               <textarea id="message" name="message" placeholder="It doesn&rsquo;t have to be tidy. Describe what&rsquo;s happening, and I&rsquo;ll take it from there." required></textarea>
+                <p class="field-error" id="message-error" hidden></p>
             </div>
             <input type="hidden" name="_subject" value="New inquiry from yvonnepadilla.com" />
             <div class="hp" aria-hidden="true">
@@ -684,8 +697,50 @@
         });
       } catch (e) { /* storage unavailable; the form still works */ }
 
+
+      // Friendlier, persistent error messages (the browser's own checks still
+      // run when JavaScript is off).
+      form.setAttribute('novalidate', '');
+      var messages = {
+        name: 'Please add your name.',
+        email: 'Please add an email address I can reply to, like name@example.com.',
+        message: 'Please tell me a little about what you\u2019re noticing.'
+      };
+      function check(el) {
+        var err = document.getElementById(el.id + '-error');
+        if (!err) return true;
+        var ok = el.checkValidity();
+        if (ok) {
+          el.removeAttribute('aria-invalid');
+          el.removeAttribute('aria-describedby');
+          err.hidden = true;
+          err.textContent = '';
+        } else {
+          el.setAttribute('aria-invalid', 'true');
+          el.setAttribute('aria-describedby', err.id);
+          err.textContent = messages[el.id];
+          err.hidden = false;
+        }
+        return ok;
+      }
+      ['name', 'email', 'message'].forEach(function (id) {
+        var el = document.getElementById(id);
+        el.addEventListener('blur', function () { if (el.value || el.hasAttribute('aria-invalid')) check(el); });
+        el.addEventListener('input', function () { if (el.hasAttribute('aria-invalid')) check(el); });
+      });
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+        var firstBad = null;
+        ['name', 'email', 'message'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (!check(el) && !firstBad) firstBad = el;
+        });
+        if (firstBad) {
+          status.className = 'form-status error';
+          status.textContent = 'Please fix the highlighted fields, then send again.';
+          firstBad.focus();
+          return;
+        }
         var button = form.querySelector('.form-submit');
         button.disabled = true;
         button.textContent = 'Sending…';
