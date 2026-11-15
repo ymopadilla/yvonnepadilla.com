@@ -10,6 +10,7 @@ Yvonne Padilla's consulting site: Leadership Consultant & Organizational Strateg
   - `about.html`: bio, stats, full testimonials.
   - `contact.html`: the contact form and its script.
 - The header, footer, and Cloudflare script are repeated on every page. If you change one, change all five.
+- `js/site.js` runs the phone menu (the Menu button below 760 px). Every page loads it. Without JavaScript, the links simply show under the header.
 - Design: editorial layout (November 2026). White and lavender sections, ink rules, Fraunces headlines, handwritten Caveat "editor notes," polaroid photos, and the ROOTS framework plate.
 - Other pages: `privacy.html` and `404.html`, styled to match (they keep their own small inline styles).
 - Images live in `images/`. Originals (full-size sources) live in `images/originals/`. Favicons and the share image (`og-image-v2.jpg`, 1200 × 630) sit in the root.

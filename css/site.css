@@ -268,6 +268,28 @@ a:hover { color: var(--violet-ink); }
 .facts strong { display: block; font-family: var(--serif); font-size: 30px; font-weight: 600; color: var(--ink); line-height: 1.15; }
 .site-footer .footer-nav { border-bottom: 1px solid var(--line); }
 .contact-next { margin-top: 24px; color: var(--body); }
+
+/* ---- Phone menu ---- */
+.menu-toggle { display: none; align-items: center; justify-content: center; min-height: 44px; min-width: 68px; padding: 0 14px; background: var(--white); border: 1.5px solid var(--ink); color: var(--ink); font-family: var(--sans); font-size: 15px; font-weight: 700; cursor: pointer; }
+.menu-toggle:hover { background: var(--lav); }
+@media (max-width: 760px) {
+  .site-header .wrap { gap: 10px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
+  .js .menu-toggle { display: inline-flex; margin-left: auto; }
+  .js .site-header nav { display: none; order: 3; width: 100%; margin-left: 0; }
+  .js .site-header.menu-open nav { display: block; }
+  .js .site-header.menu-open .nav { flex-direction: column; align-items: stretch; gap: 0; padding-top: 6px; }
+  .js .site-header.menu-open .nav li { border-top: 1px solid var(--line); }
+  .js .site-header.menu-open .nav a { display: flex; width: 100%; min-height: 54px; font-size: 19px; font-family: var(--serif); font-weight: 600; }
+  .js .site-header.menu-open .nav a[aria-current="page"] { color: var(--violet-deep); text-decoration: none; }
+  .js .site-header.menu-open .nav a[aria-current="page"]::after { content: "  90  you are here"; font-family: var(--hand); font-weight: 500; font-size: 20px; color: var(--coral-ink); margin-left: 10px; }
+  .nav-call { padding: 0 14px; }
+  .brand { gap: 8px; }
+  .brand img { width: 28px; height: 28px; }
+  .brand span { font-size: 18px; }
+}
+@media (max-width: 374px) {
+  .brand span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+}
 .service h2.service-title { flex: 0 0 220px; font-family: var(--serif); font-size: 24px; font-weight: 600; line-height: 1.25; }
 @media (max-width: 640px) { .service h2.service-title { flex: none; } }
 .thanks h2 { font-family: var(--serif); font-size: 30px; font-weight: 600; margin-bottom: 10px; }
